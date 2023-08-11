@@ -1,0 +1,321 @@
+# Swedish translations for hydrapaper package.
+# Copyright (C) 2021 THE hydrapaper'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the hydrapaper package.
+# eson <eson@svenskasprakfiler.se>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hydrapaper 2.0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-07 08:41+0100\n"
+"PO-Revision-Date: 2021-01-20 15:47+0100\n"
+"Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
+"Language-Team: Swedish\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.3\n"
+
+#: ../hydrapaper/__main__.py:157
+#, python-brace-format
+msgid "Error: you passed {0} wallpapers for {1} monitors"
+msgstr "Fel: Du angav {0} bakgrundsbilder för {1} bildskärmar"
+
+#: ../hydrapaper/__main__.py:166
+#, python-brace-format
+msgid "Error: you passed {0} modes for {1} wallpapers"
+msgstr "Fel: Du angav {0} lägen för {1} bildskärmar"
+
+#: ../hydrapaper/__main__.py:175
+#, python-brace-format
+msgid ""
+"Error: wallpaper mode {0} is not valid. Allowed values are: zoom, fit_black, "
+"fit_blur, center_black, center_blur"
+msgstr ""
+"Fel: Bakgrundsläge {0} är inte giltigt. Tillåtna värden är: zoom, fit_black, "
+"fit_blur, center_black, center_blur"
+
+#: ../hydrapaper/__main__.py:185
+#, python-brace-format
+msgid "Error: {0} is not a valid image path"
+msgstr "Fel: {0} är inte en giltig bildsökväg"
+
+#: ../hydrapaper/__main__.py:242
+msgid "set wallpapers from command line"
+msgstr "ange skrivbordsbakgrunder från kommandorad"
+
+#: ../hydrapaper/__main__.py:248
+msgid ""
+"specify the modes for the wallpapers (zoom, center_black, center_blur, "
+"fit_black, fit_blur)"
+msgstr ""
+"Ange lägen för bakgrundsbilderna (zoom, center_black, center_blur, "
+"fit_black, fit_blur)"
+
+#: ../hydrapaper/__main__.py:255
+msgid "set wallpapers randomly"
+msgstr "ange skrivbordsbakgrunder slumpmässigt"
+
+#: ../hydrapaper/__main__.py:261
+msgid "set lockscreen wallpapers instead of desktop ones"
+msgstr "ange låsskärms- istället för skrivbordsbakgrunder"
+
+#: ../hydrapaper/monitors_flowbox.py:115
+msgid "Combined spanned monitor"
+msgstr "Kombinerad utsträckt bildskärm"
+
+#: ../hydrapaper/wallpapers_flowbox.py:123
+msgid "Remove favorite"
+msgstr "Ta bort favorit"
+
+#: ../hydrapaper/wallpapers_flowbox.py:125
+msgid "Add favorite"
+msgstr "Lägg till som favorit"
+
+#: ../hydrapaper/main_stack.py:14
+msgid "Wallpapers"
+msgstr "Bakgrundsbilder"
+
+#: ../hydrapaper/main_stack.py:20
+msgid "Favorites"
+msgstr "Favoriter"
+
+#: ../hydrapaper/monitor_parser.py:75
+msgid "Error parsing monitors (Gdk)"
+msgstr "Kunde inte tolka skärmar (Gdk)"
+
+#: ../hydrapaper/wallpapers_folders_view.py:87
+msgid "Add wallpaper folders"
+msgstr "Lägg till mapp för skrivbordsbakgrunder"
+
+#: ../hydrapaper/settings_box.py:96
+msgid "General"
+msgstr "Allmänt"
+
+#: ../hydrapaper/settings_box.py:100
+msgid "General Settings"
+msgstr "Allmänna inställningar"
+
+#: ../hydrapaper/settings_box.py:103
+msgid "Select wallpapers with a double click"
+msgstr "Ange skrivbordsbakgrunder med dubbelklick"
+
+#: ../hydrapaper/settings_box.py:108
+msgid "Show full path in folder view"
+msgstr "Visa fullständig sökväg i mappvyn"
+
+#: ../hydrapaper/settings_box.py:113
+msgid "Save each wallpaper separately"
+msgstr "Spara varje bakgrundsbild separat"
+
+#: ../hydrapaper/settings_box.py:115
+msgid ""
+"Warning: this feature will use a lot of disk space\n"
+"Periodically clear the cache to mitigate this problem"
+msgstr ""
+"Varning: Denna funktion använder mycket diskutrymme.\n"
+"Rensa cacheminnet regelbundet för att minska problemet."
+
+#: ../hydrapaper/settings_box.py:132
+msgid "Caches and favorites"
+msgstr "Cachelagring och favoriter"
+
+#: ../hydrapaper/settings_box.py:135
+msgid "Clear all favorites"
+msgstr "Ta bort alla favoriter"
+
+#: ../hydrapaper/settings_box.py:136
+msgid "Clear favorites"
+msgstr "Rensa favoriter"
+
+#: ../hydrapaper/settings_box.py:142
+msgid "Clear all caches"
+msgstr "Töm all cachelagring"
+
+#: ../hydrapaper/settings_box.py:143
+msgid "Clear caches"
+msgstr "Rensa cachelagrat"
+
+#: ../hydrapaper/settings_box.py:178
+msgid "View"
+msgstr "Visa"
+
+#: ../hydrapaper/settings_box.py:182
+msgid "View Settings"
+msgstr "Visningsinställningar"
+
+#: ../hydrapaper/settings_box.py:185
+msgid "Use big thumbnails for the monitors previews"
+msgstr "Använd stora miniatyrer till förhandsvisningen"
+
+#: ../hydrapaper/wallpaper_flowbox_item.py:82
+msgid "ERROR: cannot create thumbnail for file"
+msgstr "FEL: Kan inte skapa miniatyr för filen"
+
+#: ../data/ui/which_wallpaper_box.glade:37
+msgid "Desktop"
+msgstr "Skrivbord"
+
+#: ../data/ui/which_wallpaper_box.glade:73
+msgid "Lockscreen"
+msgstr "Låsskärm"
+
+#: ../data/ui/which_wallpaper_box.glade:109
+msgid "Both"
+msgstr "Bägge"
+
+#: ../data/ui/headerbar.glade:9
+msgid "Apply"
+msgstr "Tillämpa"
+
+#: ../data/ui/headerbar.glade:38
+msgid "Menu"
+msgstr "Meny"
+
+#: ../data/ui/headerbar.glade:60
+msgid "Wallpapers Folders"
+msgstr "Bakgrundsmapp"
+
+#: ../data/ui/wp_mode_popover_menu.glade:19
+#: ../data/ui/monitors_flowbox_item.glade:32
+msgid "Wallpaper mode"
+msgstr "Bakgrundsläge"
+
+#: ../data/ui/wp_mode_popover_menu.glade:32
+msgid "Zoom"
+msgstr "Zooma"
+
+#: ../data/ui/wp_mode_popover_menu.glade:48
+msgid "Fit (black background)"
+msgstr "Anpassa (svart bakgrund)"
+
+#: ../data/ui/wp_mode_popover_menu.glade:64
+msgid "Fit (blur)"
+msgstr "Anpassa (oskarp)"
+
+#: ../data/ui/wp_mode_popover_menu.glade:80
+msgid "Center (black background)"
+msgstr "Centrera (svart bakgrund)"
+
+#: ../data/ui/wp_mode_popover_menu.glade:97
+msgid "Center (blur)"
+msgstr "Centrera (oskarp)"
+
+#: ../data/ui/shortcutsWindow.xml:13
+msgid "Open Keyboard Shortcuts"
+msgstr "Öppna tangentbordsgenvägar"
+
+#: ../data/ui/shortcutsWindow.xml:19 ../data/ui/menu.xml:28
+msgid "Quit"
+msgstr "Avsluta"
+
+#: ../data/ui/shortcutsWindow.xml:25
+msgid "Open Menu"
+msgstr "Öppna menyn"
+
+#: ../data/ui/shortcutsWindow.xml:31
+msgid "Open preferences"
+msgstr "Öppna inställningarna"
+
+#: ../data/ui/shortcutsWindow.xml:37 ../data/ui/menu.xml:10
+msgid "Set random wallpapers"
+msgstr "Ange slumpmässiga bakgrundsbilder"
+
+#: ../data/ui/wallpapers_folders_view.glade:51
+msgid "Add"
+msgstr "Lägg till"
+
+#: ../data/ui/wallpapers_folders_view.glade:72
+msgid "Remove"
+msgstr "Ta bort"
+
+#: ../data/ui/wallpapers_folders_view.glade:103
+msgid "Activate all folders"
+msgstr "Aktivera alla mappar"
+
+#: ../data/ui/wallpapers_folders_view.glade:123
+msgid "Deactivate all folders"
+msgstr "Avaktivera alla mappar"
+
+#: ../data/ui/wallpapers_flowbox.glade:19
+msgid "title"
+msgstr "titel"
+
+#: ../data/ui/wallpapers_flowbox.glade:50
+msgid "Path:"
+msgstr "Sökväg:"
+
+#: ../data/ui/monitors_flowbox_item.glade:56
+msgid "label"
+msgstr "etikett"
+
+#: ../data/ui/menu.xml:6
+msgid "Single wallpaper spanned mode"
+msgstr "Enskild bakgrundsbild, utsträckt läge"
+
+#: ../data/ui/menu.xml:16
+msgid "Preferences"
+msgstr "Inställningar"
+
+#: ../data/ui/menu.xml:20
+msgid "Shortcuts"
+msgstr "Genvägar"
+
+#: ../data/ui/menu.xml:24
+msgid "About"
+msgstr "Om"
+
+#: ../data/org.gabmus.hydrapaper.desktop.in:3
+msgid "@prettyname@"
+msgstr "@prettyname@"
+
+#: ../data/org.gabmus.hydrapaper.desktop.in:4
+msgid "Wallpaper manager with multimonitor support"
+msgstr "Bakgrundshanterare med flerskärmsstöd"
+
+#: ../data/org.gabmus.hydrapaper.desktop.in:6
+msgid "@appid@"
+msgstr "@appid@"
+
+#: ../data/org.gabmus.hydrapaper.desktop.in:12
+msgid "wallpaper;background;monitor;"
+msgstr "skrivbordsbakgrund;bakgrund;bildskärm;"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:4
+msgid "HydraPaper"
+msgstr "HydraPaper"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:5
+msgid "Gabriele Musco"
+msgstr "Gabriele Musco"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:6
+msgid "Wallpaper manager with multi monitor support"
+msgstr "Bakgrundshanterare med flerskärmsstöd"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:15
+msgid ""
+"HydraPaper is a wallpaper manager, specifically designed to work around the "
+"lack of functionality of many desktop environments to set a different "
+"wallpaper for each monitor in a multi monitor setup. It accomplishes this by "
+"scaling and merging different wallpapers into a single one and setting it as "
+"spanned."
+msgstr ""
+"HydraPaper är en bakgrundshanterare, särskilt utformad för att kringgå "
+"bristen på funktionalitet i många skrivbordsmiljöer, när det gäller att "
+"ställa in en skrivbordsbakgrund för varje bildskärm, i en "
+"flerskärmskonfiguration. Proghrammet åstadkommer detta genom att skala och "
+"slå samman olika bakgrundsbilder till en enda och ställa in den som "
+"utsträckt."
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:16
+msgid ""
+"It currently supports various desktop environments, including GNOME, MATE, "
+"Cinnamon and Budgie. Experimental support is included for the sway window "
+"manager."
+msgstr ""
+"Den stödjer för närvarande olika skrivbordsmiljöer, inklusive GNOME, MATE, "
+"Cinnamon och Budgie. Experimentellt stöd ingår också för sway-"
+"fönsterhanteraren."

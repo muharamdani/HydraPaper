@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/org/gabmus/hydrapaper">
-    <file compressed="true">org.gabmus.hydrapaper.service.desktop</file>
-
-    <!-- <file preprocess="xml-stripblanks">gtk/menus.ui</file> -->
-    <!--file preprocess="xml-stripblanks">gtk/help-overlay.ui</file-->
-
-    <file preprocess="xml-stripblanks">ui/ui.glade</file>
+    <file compressed="true">ui/gtk_style.css</file>
+    <file preprocess="xml-stripblanks">aboutdialog.ui</file>
+    <file preprocess="xml-stripblanks">ui/headerbar.ui</file>
+    <file preprocess="xml-stripblanks">ui/wallpapers_flowbox.ui</file>
+    <file preprocess="xml-stripblanks">ui/wallpaper_flowbox_item_popover.ui</file>
+    <file preprocess="xml-stripblanks">ui/wallpapers_folders_view.ui</file>
+    <file preprocess="xml-stripblanks">ui/monitors_flowbox_item.ui</file>
+    <file preprocess="xml-stripblanks">ui/wp_mode_popover_menu.ui</file>
+    <file preprocess="xml-stripblanks">ui/wallpaper_flowbox_item.ui</file>
+    <file preprocess="xml-stripblanks">ui/shortcutsWindow.ui</file>
+    <!-- aboutdialog.glade is outside of ui/ on purpose. meson needs to configure ui/aboutdialog.glade.in,
+         but refuses to put the output inside a subdir, so I just worked around this. -->
 
     <file preprocess="xml-stripblanks">icons/org.gabmus.hydrapaper.svg</file>
     <file preprocess="xml-stripblanks">icons/org.gabmus.hydrapaper-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/status/slideshowmode-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/status/apply-dark-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/favorite-badge.svg</file>
 
   </gresource>
 </gresources>

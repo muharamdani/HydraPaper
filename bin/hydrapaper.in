@@ -1,8 +1,8 @@
 #!@PYTHON@
 
-# hydrapaper
+# @projectname@
 #
-# Copyright (C) 2016 Gabriele Musco <emaildigabry@gmail.com>
+# Copyright (C) 2019 @authorfullname@ <@authoremail@>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -21,6 +21,7 @@ import os
 import sys
 import signal
 import gettext
+import locale
 
 sys.path.insert(1, '@pythondir@')
 
@@ -36,19 +37,34 @@ if builddir:
 
 signal.signal(signal.SIGINT, signal.SIG_DFL)
 
-# gettext.install('trg', localedir)
+# Why both locale and gettext?
+# gettext works for the python part
+# but not for the glade/xml files
+# they need locale
+# don't ask me, it's effin weird
+# I copied this from uberwriter
+try:
+    locale.bindtextdomain('hydrapaper', localedir)
+    locale.textdomain('hydrapaper')
+except AttributeError as e:
+    # Python built without gettext support doesn't have bindtextdomain()
+    # and textdomain()
+    print("Couldn't bind the gettext translation domain. Some translations"
+    " won't work. Error: \n{}".format(e))
+gettext.textdomain('hydrapaper')
+gettext.bindtextdomain('hydrapaper', localedir)
 
 if __name__ == '__main__':
     import gi
 
-    gi.require_version('Gtk', '3.0')
-    gi.require_version('Gdk', '3.0')
-    gi.require_version('Wnck', '3.0')
+    gi.require_version('Gtk', '4.0')
+    gi.require_version('Gdk', '4.0')
+    gi.require_version('Adw', '1')
 
 
     from gi.repository import Gio
-    resource = Gio.Resource.load(os.path.join(pkgdatadir, 'org.gabmus.hydrapaper.gresource'))
+    resource = Gio.Resource.load(os.path.join(pkgdatadir, '@appid@.gresource'))
     resource._register()
 
-    from hydrapaper import __main__
+    from @projectname@ import __main__
     __main__.main()

@@ -1,0 +1,37 @@
+using Gtk 4.0;
+
+template WallpaperFlowboxItemPopover : Popover {
+    autohide: true;
+    Box flowbox_item_popover_content {
+        orientation: vertical;
+        margin-start: 12; margin-end: 12;
+        margin-top: 12; margin-bottom: 12;
+        spacing: 6;
+        Label wallpaper_name_label {
+            styles ["bigger_bold"]
+            justify: center;
+            ellipsize: end;
+            single-line-mode: true;
+            max-width-chars: 50;
+        }
+        Button favorite_btn {
+            label: _("Add Favorite");
+            halign: center;
+            clicked => on_favorite_btn_clicked();
+        }
+        Box {
+            orientation: horizontal;
+            spacing: 6;
+            Label {
+                styles ["dim-label"]
+                label: _("Path:");
+                xalign: 0.0;
+            }
+            Entry wallpaper_path_entry {
+                editable: false;
+                max-width-chars: 30;
+                hexpand: true;
+            }
+        }
+    }
+}

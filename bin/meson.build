@@ -2,18 +2,23 @@ conf = configuration_data()
 conf.set('VERSION', meson.project_version())
 conf.set('localedir', join_paths(prefix, get_option('localedir')))
 conf.set('pkgdatadir', pkgdatadir)
-conf.set('PYTHON', python3.find_python().path())
+conf.set('PYTHON', py_installation.full_path())
 conf.set('pythondir', join_paths(prefix, pythondir))
+conf.set('localedir', join_paths(prefix, localedir))
+conf.set('projectname', meson.project_name())
+conf.set('authorfullname', authorfullname)
+conf.set('authoremail', authoremail)
+conf.set('appid', '.'.join([domain, author, meson.project_name()]))
 
 configure_file(
-  input: 'hydrapaper.in',
-  output: 'hydrapaper',
+  input: meson.project_name() + '.in',
+  output: meson.project_name(),
   configuration: conf,
   install: true,
   install_dir: get_option('bindir')
 )
 
-hydrapaper = join_paths(meson.build_root(), 'bin', 'hydrapaper')
+myprogram = join_paths(meson.project_build_root(), 'bin', meson.project_name())
 run_target('run',
-  command: [hydrapaper]
+  command: [myprogram]
 )

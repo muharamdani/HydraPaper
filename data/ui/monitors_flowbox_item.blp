@@ -1,0 +1,21 @@
+using Gtk 4.0;
+
+template MonitorsFlowboxItem : FlowBoxChild {
+    Box main_box {
+        halign: center;
+        margin-start: 24; margin-end: 24;
+        hexpand: false;
+        orientation: vertical;
+        Overlay overlay {
+            vexpand: true;
+            Image image {}
+            [overlay] MenuButton wp_mode_btn {
+                styles ["circular"]
+                tooltip-text: _("Wallpaper Mode");
+                halign: end; valign: end;
+                icon-name: "view-more-horizontal";
+            }
+        }
+        Label label {}
+    }
+}

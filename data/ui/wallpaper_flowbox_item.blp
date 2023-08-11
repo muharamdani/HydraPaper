@@ -1,0 +1,32 @@
+using Gtk 4.0;
+
+
+template WallpaperBox : FlowBoxChild {
+    halign: fill; valign: fill;
+    width-request: 250; height-request: 250;
+    Box {
+        orientation: vertical;
+        Overlay container_box {
+            halign: center; valign: center;
+            width-request: 250; height-request: 250;
+            Picture wp_image {
+                width-request: 250;
+                can-shrink: true;
+            }
+            [overlay] Image heart_icon {
+                icon-size: large;
+                visible: false;
+                halign: start; valign: center;
+                margin-start: 12;
+                resource: "/org/gabmus/hydrapaper/icons/favorite-badge.svg";
+            }
+        }
+        Label label {
+            ellipsize: end;
+            wrap: false;
+            justify: center;
+            halign: center;
+            max-width-chars: 25;
+        }
+    }
+}

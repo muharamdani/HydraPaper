@@ -1,74 +1,158 @@
-# def make_wallpapers_flowbox_item(self, wp_path):
-#         pixbuf_fake_list=[]
-#         pixbuf_thread = ThreadingHelper.do_async(
-#             self.make_wallpaper_pixbuf,
-#             (wp_path, pixbuf_fake_list)
-#         )
-#         ThreadingHelper.wait_for_thread(pixbuf_thread)
-#         if len(pixbuf_fake_list) == 1:
-#             wp_pixbuf = pixbuf_fake_list[0]
-#             box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-#             image = Gtk.Image.new_from_pixbuf(wp_pixbuf)
-#             box.pack_start(image, False, False, 0)
-#             box.set_margin_left(12)
-#             box.set_margin_right(12)
-#             box.wallpaper_path = wp_path
-#             return box
+from gettext import gettext as _
+from gi.repository import Gtk, GLib
+import os
+from PIL import Image
+from hashlib import sha256
+from hydrapaper.confManager import ConfManager
+from pathlib import Path
+from threading import Thread
 
-import gi
-gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, Gdk, Gio, GdkPixbuf
-from . import threading_helper as ThreadingHelper
 
+@Gtk.Template(
+    resource_path='/org/gabmus/hydrapaper/ui/wallpaper_flowbox_item_popover.ui'
+)
+class WallpaperItemPopover(Gtk.Popover):
+    __gtype_name__ = 'WallpaperFlowboxItemPopover'
+    favorite_btn = Gtk.Template.Child()
+    wallpaper_path_entry = Gtk.Template.Child()
+    wallpaper_name_label = Gtk.Template.Child()
+
+    def __init__(self, wp_path, parent_w, **kwargs):
+        super().__init__(**kwargs)
+        self.wp_path = wp_path
+        self.parent_w = parent_w
+        self.set_parent(self.parent_w)
+
+    def popup(self, *args):
+        if (
+                self.parent_w.get_parent().get_parent().get_parent(
+                    ).is_favorites or
+                self.parent_w.is_fav
+        ):
+            self.favorite_btn.set_label(_('Remove favorite'))
+        else:
+            self.favorite_btn.set_label(_('Add favorite'))
+        self.wallpaper_path_entry.set_text(self.wp_path)
+        self.wallpaper_name_label.set_text(Path(self.wp_path).name)
+        super().popup(*args)
+
+    @Gtk.Template.Callback()
+    def on_favorite_btn_clicked(self, btn):
+        self.parent_w.set_fav(not self.parent_w.is_fav)
+        self.parent_w.confman.emit('hydrapaper_populate_wallpapers', '')
+        self.popdown()
+
+
+@Gtk.Template(
+    resource_path='/org/gabmus/hydrapaper/ui/wallpaper_flowbox_item.ui'
+)
 class WallpaperBox(Gtk.FlowBoxChild):
+    __gtype_name__ = 'WallpaperBox'
+    wp_image = Gtk.Template.Child()
+    heart_icon = Gtk.Template.Child()
+    container_box = Gtk.Template.Child()
+    label = Gtk.Template.Child()
 
-    def __init__(self, wp_path, *args, **kwds):
-        super().__init__(*args, **kwds)
-
-        self.set_halign(Gtk.Align.CENTER)
-        self.set_valign(Gtk.Align.CENTER)
+    def __init__(self, wp_path, **kwargs):
+        super().__init__(**kwargs)
+        self.confman = ConfManager()
 
         self.wallpaper_path = wp_path
+        self.popover = WallpaperItemPopover(self.wallpaper_path, self)
+        self.pathlib_path = Path(wp_path)
+        self.cache_path = '{0}/{1}.png'.format(
+            self.confman.thumbs_cache_path,
+            sha256(
+                f'HydraPaperThumb{self.wallpaper_path}'.encode()
+            ).hexdigest()
+        )
         self.is_fav = False
-        self.container_box = Gtk.Overlay()
-        self.container_box.set_halign(Gtk.Align.CENTER)
-        self.container_box.set_valign(Gtk.Align.CENTER)
-        self.wp_image = Gtk.Image.new_from_icon_name('image-x-generic', Gtk.IconSize.DIALOG)
-        self.heart_icon = Gtk.Image.new_from_icon_name('emblem-favorite', Gtk.IconSize.DIALOG)
-        self.heart_icon.set_no_show_all(True)
-        self.heart_icon.set_halign(Gtk.Align.END)
-        self.heart_icon.set_valign(Gtk.Align.END)
-        self.heart_icon.set_margin_bottom(6)
-        self.heart_icon.set_margin_right(6)
-        self.container_box.add(self.wp_image)
-        self.container_box.set_margin_left(12)
-        self.container_box.set_margin_right(12)
         self.container_box.wallpaper_path = wp_path
+        self.resolution = ''
 
-        self.container_box.add_overlay(self.heart_icon)
-        self.heart_icon.hide()
+        self.set_wallpaper_thumb()
+        self.set_fav(self.wallpaper_path in self.confman.conf['favorites'])
 
-        self.add(self.container_box)
+        self.click_gesture = Gtk.GestureClick.new()
+        self.click_gesture.set_propagation_phase(Gtk.PropagationPhase.CAPTURE)
+        self.click_gesture.set_button(3)
+        self.click_gesture.connect(
+            'released', self.on_rightclick
+        )
+        self.add_controller(self.click_gesture)
+
+        self.longpress = Gtk.GestureLongPress.new()
+        self.longpress.set_propagation_phase(Gtk.PropagationPhase.CAPTURE)
+        self.longpress.set_touch_only(False)
+        self.longpress.connect(
+            'pressed',
+            self.on_rightclick
+        )
+        self.add_controller(self.longpress)
+        self.label.set_text(self.pathlib_path.stem)
+
+    def on_rightclick(self, *args):
+        self.get_parent().select_child(self)
+        self.confman.emit(
+            'hydrapaper_flowbox_wallpaper_selected',
+            self.wallpaper_path
+        )
+        self.popover.popup()
+
+    def set_size_tooltip(self):
+        with Image.open(self.wallpaper_path) as img:
+            self.resolution = 'x'.join([
+                str(dim) for dim in img.size
+            ])
+            GLib.idle_add(
+                lambda: self.wp_image.set_tooltip_text(self.resolution)
+            )
 
     def set_wallpaper_thumb(self):
-        pixbuf_fake_list=[]
-        pixbuf_thread = ThreadingHelper.do_async(
-            self.make_wallpaper_pixbuf,
-            (self.wallpaper_path, pixbuf_fake_list)
-        )
-        ThreadingHelper.wait_for_thread(pixbuf_thread)
-        self.wp_image.set_from_pixbuf(pixbuf_fake_list[0])
-        self.wp_image.show()
 
-    def set_fav(self, fav):
+        def af():
+            self.make_wallpaper_thumb(self.cache_path)
+            GLib.idle_add(cb)
+
+        def cb():
+            self.wp_image.set_filename(self.cache_path)
+            self.wp_image.show()
+
+        if os.path.isfile(self.cache_path):
+            cb()
+            Thread(target=self.set_size_tooltip(), daemon=True).start()
+        else:
+            Thread(target=af, daemon=True).start()
+
+    def set_fav(self, fav: bool):
         self.is_fav = fav
         if self.is_fav:
-            self.heart_icon.show()
+            self.heart_icon.set_visible(True)
+            if self.wallpaper_path not in self.confman.conf['favorites']:
+                self.confman.conf['favorites'].append(self.wallpaper_path)
         else:
-            self.heart_icon.hide()
+            self.heart_icon.set_visible(False)
+            if self.wallpaper_path in self.confman.conf['favorites']:
+                self.confman.conf['favorites'].pop(
+                    self.confman.conf['favorites'].index(self.wallpaper_path)
+                )
+        self.confman.save_conf()
 
-    def make_wallpaper_pixbuf(self, wp_path, return_pixbuf_pointer=-1):
-        wp_pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(wp_path, 250, 250, True)
-        if type(return_pixbuf_pointer) == list:
-            return_pixbuf_pointer.append(wp_pixbuf)
-        return wp_pixbuf
+    def make_wallpaper_thumb(self, wp_path):
+        try:
+            thumb = Image.open(self.wallpaper_path)
+            self.resolution = 'x'.join([
+                str(dim) for dim in thumb.size
+            ])
+            GLib.idle_add(
+                lambda: self.wp_image.set_tooltip_text(self.resolution)
+            )
+            thumb.thumbnail((250, 250), Image.ANTIALIAS)
+            thumb.save(self.cache_path, 'PNG')
+            thumb.close()
+        except IOError:
+            print(
+                _('ERROR: cannot create thumbnail for file'),
+                self.wallpaper_path
+            )
+        return self.cache_path

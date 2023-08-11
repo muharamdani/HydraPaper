@@ -1,0 +1,475 @@
+# Russian translations for hydrapaper package.
+# Copyright (C) 2019 THE hydrapaper'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the hydrapaper package.
+# Alessandra Gallia <alessandragalliaaru@gmail.com>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hydrapaper 1.9.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-11 20:54+0200\n"
+"PO-Revision-Date: 2019-09-24 20:50+0200\n"
+"Last-Translator: Alessandra Gallia <alessandragalliaaru@gmail.com>\n"
+"Language-Team: Russian <gnu@d07.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#: ../hydrapaper/wallpaper_flowbox_item.py:79
+msgid "ERROR: cannot create thumbnail for file"
+msgstr "Ошибка: не удается создать эскиз файла"
+
+#: ../hydrapaper/monitor_parser.py:44
+msgid "Error parsing monitors (Gdk)"
+msgstr "Сбой разбора экрана (Gdk)"
+
+#: ../hydrapaper/__main__.py:121
+#, python-brace-format
+msgid "Error: you passed {0} wallpapers for {1} monitors"
+msgstr "Ошибка: вы вводили {0} обои для {1} экранов"
+
+#: ../hydrapaper/__main__.py:128
+#, python-brace-format
+msgid "Error: {0} is not a valid image path"
+msgstr "Ошибка: {0} - это неверный путь к изображению"
+
+#: ../hydrapaper/__main__.py:162
+msgid "set wallpapers from command line"
+msgstr "устоновить обои через командную строку"
+
+#: ../hydrapaper/__main__.py:163
+msgid "set wallpapers randomly"
+msgstr "устоновить обои случайно"
+
+#: ../hydrapaper/main_stack.py:12
+msgid "Wallpapers"
+msgstr "Обои"
+
+#: ../hydrapaper/main_stack.py:14
+msgid "Favorites"
+msgstr "Избранные"
+
+#: ../hydrapaper/wallpapers_flowbox.py:109
+msgid "Remove favorite"
+msgstr "Удалить из избранных"
+
+#: ../hydrapaper/wallpapers_flowbox.py:111
+msgid "Add favorite"
+msgstr "Добавить в избранные"
+
+#: ../hydrapaper/settings_box.py:82
+msgid "General"
+msgstr "Основные"
+
+#: ../hydrapaper/settings_box.py:87
+msgid "General Settings"
+msgstr "Основные настройки"
+
+#: ../hydrapaper/settings_box.py:90
+msgid "Select wallpapers with a double click"
+msgstr "Дважды нажать, чтобы выбрать обои"
+
+#: ../hydrapaper/settings_box.py:95
+msgid "Keep favorites in main wallpapers view"
+msgstr "Сдержать избранные на основном представлении обоев"
+
+#: ../hydrapaper/settings_box.py:100
+msgid "Show full path in folder view"
+msgstr "Отображать полный путь на просмотре папок"
+
+#: ../hydrapaper/settings_box.py:111
+msgid "Caches and favorites"
+msgstr "Кэш и избранные"
+
+#: ../hydrapaper/settings_box.py:114
+msgid "Clear all favorites"
+msgstr "Очистить все избранные"
+
+#: ../hydrapaper/settings_box.py:115
+msgid "Clear favorites"
+msgstr "Очистить избранные"
+
+#: ../hydrapaper/settings_box.py:121
+msgid "Clear all caches"
+msgstr "Очистить весь кэш"
+
+#: ../hydrapaper/settings_box.py:122
+msgid "Clear caches"
+msgstr "Очистить кэш"
+
+#: ../hydrapaper/settings_box.py:157
+msgid "View"
+msgstr "Вид"
+
+#: ../hydrapaper/settings_box.py:162
+msgid "View Settings"
+msgstr "Посмотрить настройки"
+
+#: ../hydrapaper/settings_box.py:165
+msgid "Use big thumbnails for the monitors previews"
+msgstr "Использоваться крупными эскизами для предварительного просмотра экрана"
+
+#: ../data/ui/menu.xml:6
+msgid "Set random wallpapers"
+msgstr "Установить случайные обои"
+
+#: ../data/ui/menu.xml:12
+msgid "Preferences"
+msgstr "Персональные настройки"
+
+#: ../data/ui/menu.xml:16
+msgid "Shortcuts"
+msgstr "Быстрые доступы"
+
+#: ../data/ui/menu.xml:20
+msgid "About"
+msgstr "О программе"
+
+#: ../data/ui/menu.xml:24 ../data/ui/shortcutsWindow.xml:13
+msgid "Quit"
+msgstr "Покидать"
+
+#: ../data/ui/choose_folder_dialog.glade:22
+msgid "Add a wallpapers folder"
+msgstr "Добавить папку обоев"
+
+#: ../data/ui/choose_folder_dialog.glade:89
+msgid "Selected path has already been added"
+msgstr "Выбранный путь уже добавлен"
+
+#: ../data/ui/choose_folder_dialog.glade:106
+msgid "Close\n"
+msgstr "Закрыть\n"
+
+#: ../data/ui/wallpapers_folders_view.glade:51
+msgid "Add"
+msgstr "Добавить"
+
+#: ../data/ui/wallpapers_folders_view.glade:73
+msgid "Remove"
+msgstr "Удалить"
+
+#: ../data/ui/headerbar.glade:14
+msgid "Apply"
+msgstr "Применить"
+
+#: ../data/ui/headerbar.glade:31
+msgid "Lower all other windows"
+msgstr "Свернуть все другие окна"
+
+#: ../data/ui/which_wallpaper_box.glade:43
+msgid "Desktop"
+msgstr "Рабочий стол"
+
+#: ../data/ui/which_wallpaper_box.glade:100
+msgid "Lockscreen"
+msgstr "Экран блокировки"
+
+#: ../data/ui/which_wallpaper_box.glade:157
+msgid "Both"
+msgstr "Оба"
+
+#: ../data/ui/wallpapers_flowbox.glade:19
+msgid "title"
+msgstr "название"
+
+#: ../data/ui/wallpapers_flowbox.glade:61
+msgid "Path:"
+msgstr "Путь:"
+
+#: ../data/org.gabmus.hydrapaper.desktop.in:3
+msgid "@prettyname@"
+msgstr "@prettyname@"
+
+#: ../data/org.gabmus.hydrapaper.desktop.in:4
+msgid "Wallpaper manager with multimonitor support"
+msgstr "Менеджер обоев с многомониторной поддержкой"
+
+#: ../data/org.gabmus.hydrapaper.desktop.in:6
+msgid "@appid@"
+msgstr "@appid@"
+
+#: ../data/org.gabmus.hydrapaper.desktop.in:12
+msgid "wallpaper;background;monitor;"
+msgstr "обои;фон;экран;"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:4
+msgid "HydraPaper"
+msgstr "HydraPaper"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:5
+msgid "Gabriele Musco"
+msgstr "Габриеле Муско"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:10
+msgid ""
+"HydraPaper lets you set different wallpapers for each of your monitors in "
+"the GNOME desktop."
+msgstr ""
+"HydraPaper позволяет устанавливать разные обои на каждый из вашего мониторов "
+"на рабочий стол GNOME."
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:11
+msgid ""
+"It works around this lack of functionality by automatically merging multiple "
+"wallpapers into one, and setting it as your wallpaper with the \"Spanned\" "
+"option."
+msgstr ""
+"Решит это отсутствие функциональности автоматический объединяя разных обоев "
+"в один, и устанавливает это как ваши обои с параметром \"Расширения\"."
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:12
+msgid ""
+"HydraPaper also supports the MATE desktop, and should work on any desktop "
+"that is based on GNOME, like Budgie and Pantheon."
+msgstr ""
+"HydraPaper поддерживает тоже рабочий стол MATE, и должно работать на любом "
+"рабочем столе, основанном на GNOME, вроде Budgie и Pantheon."
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:38
+msgid "Fixed conflict between desktop and lockscreen wallpapers"
+msgstr "Исправлен конфликт между обоями рабочего стола и экраном блокировки"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:45
+msgid ""
+"Merged wallpapers aren't cached anymore. Just keep one and save lots of space"
+msgstr ""
+"Объединенные обои больше не кэшируются. Кэшируется только один, экономя "
+"много места"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:52
+msgid "Fixed path enable/disable bug"
+msgstr "Исправлена ошибка включения/выключения пути"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:59
+msgid "Moved app menu to the far right"
+msgstr "Сдвинуто меню приложения в правую сторону"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:60
+msgid "Added view switcher bar when window is too small"
+msgstr "Добавлен панель свитчера вида, когда окно слишком маленькое"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:67
+msgid "Added option to set lockscreen wallpapers in GNOME"
+msgstr "Добавлена опция за установкой обоев на экран блокировки в GNOME"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:74
+msgid "Internationalization support and Italian translation"
+msgstr "Поддержка интернационализации и перевод на итальянский язык"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:75
+msgid "New widgets from Purism's libhandy"
+msgstr "Новые виджеты выпуска libhandy компании Purism"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:76
+msgid "Removed animated spinner"
+msgstr "Удален анимированный спиннер"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:77
+msgid "Paths in folders view show only the folder name by default"
+msgstr "Пути просмотра папок отображают автоматический только имя папок"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:78
+msgid "New website"
+msgstr "Новый сайт"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:85
+msgid "Properly implemented MATE support"
+msgstr "Правильно осуществленная поддержка MATE"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:86
+msgid "Added post-installation commands"
+msgstr "Добавлены команды после установки"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:93
+msgid "Fixing wrong import"
+msgstr "Исправление неудачного импорта"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:100
+msgid "Fixed support for MATE under Flatpak"
+msgstr "Исправлена поддержка MATE под Flatpak"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:107
+msgid "New icon! Should be closer to GNOME HIG."
+msgstr "Новый значок! Должен быть ближе к GNOME HIG."
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:108
+msgid ""
+"Exposed random wallpaper functionality from the in-app menu and desktop file"
+msgstr ""
+"Выставлена функция случайных обоев через меню приложения и файл рабочего "
+"стола"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:115
+msgid "Added random wallpaper functionality from command line with -r option"
+msgstr "Добавлена функция случайных обоев через командную строку с опцией -r"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:122
+msgid "Fixing startup error when added folders get deleted"
+msgstr "Исправление ошибки запуска при удалении добавленных папок"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:129
+msgid "Get correct localized Pictures folder on first startup"
+msgstr "Получить правильно локализованную папку Изображений при первом запуске"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:130
+msgid "App doesn't crash anymore if a folder doesn't exist"
+msgstr "Приложение больше не падает, если папка не существует"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:137
+msgid "Fixed wallpapers not hiding on startup"
+msgstr "Исправлены обои, не скрывающиеся при запуске"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:144
+msgid "Complete code refactoring"
+msgstr "Выполнен рефакторинг кода"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:145
+msgid "Made the whole build system more modular"
+msgstr "Сделана целая построенная система более модульной"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:146
+msgid "Moved app menu to the headerbar"
+msgstr "Сдвинуто меню приложения в строку заголовка"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:147
+msgid "Initial support for keyboard shortcuts"
+msgstr "Начальная поддержка сочетаний клавиш"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:154
+msgid "Fixed thumbnail creation for PNGs with alpha channel"
+msgstr "Исправлено создание эскизов PNG с альфа-каналом"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:155
+msgid "Added option to clear cache"
+msgstr "Добавлен параметр очистки кэша"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:156
+msgid "Various bug fixes and improvements"
+msgstr "Разные исправления ошибок и улучшения"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:163
+msgid "Improved thumbnail generation and caching for better performance"
+msgstr ""
+"Улучшены создание эскизов и кэширование за повышением производительности"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:170
+msgid "Updated dependencies"
+msgstr "Обновлены зависимости"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:171
+msgid "Added support for command line usage"
+msgstr "Добавлена поддержка использования командной строки"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:172
+msgid "Implemented boilerplate for gtk via gmgtk (gitlab.com/gabmus/gmgtk)"
+msgstr "Осуществлен шаблон для GTK через gmgtk (gitlab.com/gabmus/gmgtk)"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:173
+msgid ""
+"Migrated configuration management to gmconfig (gitlab.com/gabmus/gmconfig)"
+msgstr ""
+"Переносо конфигурационное управление в gmconfig (gitlab.com/gabmus/gmconfig)"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:174
+msgid "Migrated to GitLab"
+msgstr "Переносо в GitLab"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:181
+msgid "Better filename generation"
+msgstr "Лучшая генерация имени файлов"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:182
+msgid "Added support for vertical setups"
+msgstr "Добавлена поддержка вертикальных настроек"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:183
+msgid "Added symbolic icon"
+msgstr "Добавлен символический значок"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:184
+msgid "Added support for MATE"
+msgstr "Добавлена поддержка MATE"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:185
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:200
+msgid "Various bug fixes"
+msgstr "Разные исправления ошибок"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:192
+msgid "Design makeover"
+msgstr "Преображение дизайна"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:193
+msgid "Added longpress/rightclick menu"
+msgstr "Добавлено меню при длинном нажатии/правом щелчке"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:194
+msgid "Implemented favorites"
+msgstr "Осуществлены избранные"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:195
+msgid "Added option to temporarely disable paths"
+msgstr "Добавлен параметр за временным выключением путей"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:196
+msgid "Added option to minimize/restore all other windows"
+msgstr "Добавлен параметр, чтобы свернуть/восстановить все остальные окна"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:197
+msgid "Improved performance"
+msgstr "Улучшена производительность"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:198
+msgid "Various optimizations for flatpak distribution"
+msgstr "Разные оптимизации для дистрибуции Flatpak"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:199
+msgid "Removed the dependency on xmltodict"
+msgstr "Удалена зависимость в xmltodict"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:207
+msgid "Changed icon"
+msgstr "Изменен значок"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:208
+msgid "Added support for monitors.xml version 1"
+msgstr "Добавлена поддержка мониторов.xml версия 1"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:215
+msgid "Improved 3+ monitors configuration"
+msgstr "Улучшена конфигурация 3+ монитора"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:216
+msgid "Remember previously set wallpapers throughout sessions"
+msgstr "Вспомнить ранее установленные обои во время сессий"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:217
+msgid "Implemented cache hitting"
+msgstr "Осуществлено кэш-попадание"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:218
+msgid "Added checks and user friendly error messages for monitors.xml"
+msgstr ""
+"Добавлены проверки и дружественные пользователю сообщении об ошибок для "
+"мониторов.xml"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:225
+msgid "Bug fixes"
+msgstr "Исправления ошибок"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:226
+msgid "Added settings window"
+msgstr "Добавлено окна настроек"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:233
+msgid "Port to pillow"
+msgstr "Сдвинуто в pillow"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:240
+msgid "First release"
+msgstr "Первый релиз"

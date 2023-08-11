@@ -1,0 +1,764 @@
+# Turkish translation for HydraPaper
+# Copyright (C) 2022-2023 HydraPaper's COPYRIGHT HOLDER
+# This file is distributed under the same license as the HydraPaper package.
+#
+# Sabri Ünal <libreajans@gmail.com>, 2022, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: HydraPaper master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GabMus/HydraPaper\n"
+"POT-Creation-Date: 2022-06-21 23:43+0300\n"
+"PO-Revision-Date: 2023-01-06 03:17+0300\n"
+"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
+"Language-Team: Turkish <gnome-turk@gnome.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.1.1\n"
+"X-Project-Style: gnome\n"
+
+#: ../hydrapaper/monitor_parser.py:116
+msgid "Error parsing monitors (Gdk)"
+msgstr " Ekranlar ayrıştırılırken hata oluştu (Gdk)"
+
+#: ../hydrapaper/monitor_parser.py:156
+msgid "Combined spanned monitor"
+msgstr "Birleşik yayılmış ekran"
+
+#: ../hydrapaper/preferences_window.py:18
+msgid "Start daemon on login"
+msgstr "Girişte artalan sürecini başlat"
+
+#: ../hydrapaper/preferences_window.py:19
+msgid "React to monitor changes and start slideshow mode"
+msgstr "Ekran değişikliklerine tepki ver ve slayt gösterisi kipini başlat"
+
+#: ../hydrapaper/preferences_window.py:79
+msgid "Save each wallpaper separately"
+msgstr "Duvar kağıtlarını ayrı ayrı kaydet"
+
+#: ../hydrapaper/preferences_window.py:81
+msgid ""
+"Warning: this feature will use a lot of disk space. Periodically clear the "
+"cache to mitigate this problem"
+msgstr ""
+"Uyarı: Bu özellik çok fazla disk alanı kullanır. Bu sorunu azaltmak için "
+"önbelleği düzenli aralıklarla temizleyin"
+
+#: ../hydrapaper/preferences_window.py:91
+msgid "Enable daemon"
+msgstr "Artalan sürecini başlat"
+
+#: ../hydrapaper/preferences_window.py:93
+msgid "Needed for slideshow mode and to detect display changes"
+msgstr ""
+"Slayt gösterisi kipini ve ekran değişikliklerini algılamak için gerekli"
+
+#: ../hydrapaper/preferences_window.py:101
+msgid "General"
+msgstr "Genel"
+
+#: ../hydrapaper/preferences_window.py:104
+msgid "General preferences"
+msgstr "Genel tercihler"
+
+#: ../hydrapaper/preferences_window.py:107
+msgid "Cache and favorites"
+msgstr "Önbellek ve gözdeler"
+
+#: ../hydrapaper/preferences_window.py:109
+msgid "Clear favorites"
+msgstr "Gözdeleri temizle"
+
+#: ../hydrapaper/preferences_window.py:110
+#: ../hydrapaper/preferences_window.py:117
+msgid "Clear"
+msgstr "Temizle"
+
+#: ../hydrapaper/preferences_window.py:116
+msgid "Clear caches"
+msgstr "Önbellekleri temizle"
+
+#: ../hydrapaper/preferences_window.py:143
+msgid "Appearance"
+msgstr "Görünüm"
+
+#: ../hydrapaper/preferences_window.py:146
+msgid "Appearance preferences"
+msgstr "Görünüm tercihleri"
+
+#: ../hydrapaper/preferences_window.py:148
+msgid "Dark mode"
+msgstr "Koyu kip"
+
+#: ../hydrapaper/preferences_window.py:154
+msgid "Use big thumbnails for the monitors previews"
+msgstr "Ekran önizlemeleri için büyük minyatürler kullan"
+
+#: ../hydrapaper/preferences_window.py:160
+msgid "Show full path in folder view"
+msgstr "Klasör görünümünde tam yolu göster"
+
+#: ../hydrapaper/slideshow_listbox_row.py:30
+msgid "Move up"
+msgstr "Yukarı taşı"
+
+#: ../hydrapaper/slideshow_listbox_row.py:35
+msgid "Remove"
+msgstr "Kaldır"
+
+#: ../hydrapaper/slideshow_listbox_row.py:40
+msgid "Move down"
+msgstr "Aşağı taşı"
+
+#: ../hydrapaper/wallpaper_flowbox_item.py:32
+msgid "Remove favorite"
+msgstr "Gözdelerden kaldır"
+
+#: ../hydrapaper/wallpaper_flowbox_item.py:34
+msgid "Add favorite"
+msgstr "Gözdelere ekle"
+
+#: ../hydrapaper/wallpaper_flowbox_item.py:155
+msgid "ERROR: cannot create thumbnail for file"
+msgstr "HATA: dosya için minyatür oluşturulamadı"
+
+#: ../hydrapaper/base_preferences.py:106
+msgid "Choose a folder"
+msgstr "Klasör seç"
+
+#: ../hydrapaper/wallpapers_folders_view.py:55
+msgid "Add wallpaper folders"
+msgstr "Duvar kağıtları klasörlerine ekle"
+
+# Başlık çubuğunda yer aldığı için Başlık Düzeni tercih edilmeli.
+#: ../hydrapaper/main_stack.py:19
+msgid "Wallpapers"
+msgstr "Duvar Kağıtları"
+
+#: ../hydrapaper/main_stack.py:24
+msgid "Favorites"
+msgstr "Gözdeler"
+
+#: ../hydrapaper/__main__.py:112
+#, python-brace-format
+msgid "Error: you passed {0} wallpapers for {1} monitors"
+msgstr "Hata: {1} ekran için {0} duvar kağıdını geçtiniz"
+
+#: ../hydrapaper/__main__.py:121
+#, python-brace-format
+msgid "Error: you passed {0} modes for {1} wallpapers"
+msgstr "Hata: {1} duvar kağıdı için {0} kip geçtiniz"
+
+#: ../hydrapaper/__main__.py:130
+#, python-brace-format
+msgid ""
+"Error: wallpaper mode {0} is not valid. Allowed values are: zoom, fit_black, "
+"fit_blur, center_black, center_blur"
+msgstr ""
+"Hata: duvar kağıdı kipi {0} geçerli değil. İzin verilen değerler: zoom, "
+"fit_black, fit_blur, center_black, center_blur"
+
+#: ../hydrapaper/__main__.py:140
+#, python-brace-format
+msgid "Error: {0} is not a valid image path"
+msgstr "Hata: {0} geçerli bir resim yolu değil"
+
+#: ../hydrapaper/__main__.py:196
+msgid "set wallpapers from command line"
+msgstr "duvar kağıtlarını komut satırından ayarla"
+
+#: ../hydrapaper/__main__.py:202
+msgid ""
+"specify the modes for the wallpapers (zoom, center_black, center_blur, "
+"fit_black, fit_blur)"
+msgstr ""
+"duvar kağıtları için kipleri belirtin (zoom, center_black, center_blur, "
+"fit_black, fit_blur)"
+
+#: ../hydrapaper/__main__.py:209
+msgid "set the dark mode wallpapers (specific to GNOME 42+)"
+msgstr "Koyu kip duvar kağıtlarını ayarlayın (GNOME 42+ sürümüne özel)"
+
+#: ../hydrapaper/__main__.py:215
+msgid "set wallpapers randomly"
+msgstr "duvar kağıtlarını rastgele ayarla"
+
+#: ../data/ui/shortcutsWindow.blp:11
+msgid "Open Keyboard Shortcuts"
+msgstr "Klavye Kısayollarını Aç"
+
+#: ../data/ui/shortcutsWindow.blp:15
+msgid "Open Menu"
+msgstr "Menüyü Aç"
+
+#: ../data/ui/shortcutsWindow.blp:19 ../data/ui/headerbar.blp:33
+msgid "Search"
+msgstr "Ara"
+
+#: ../data/ui/shortcutsWindow.blp:23
+msgid "Open Preferences"
+msgstr "Tercihleri Aç"
+
+#: ../data/ui/shortcutsWindow.blp:27
+msgid "Quit"
+msgstr "Çık"
+
+#: ../data/ui/shortcutsWindow.blp:31 ../data/ui/headerbar.blp:7
+msgid "Set Random Wallpapers"
+msgstr "Rastgele Duvar Kağıtları Ayarla"
+
+#: ../data/ui/wallpaper_flowbox_item_popover.blp:18
+msgid "Add Favorite"
+msgstr "Gözdelere ekle"
+
+#: ../data/ui/wallpaper_flowbox_item_popover.blp:27
+msgid "Path:"
+msgstr "Yol:"
+
+#: ../data/ui/wp_mode_popover_menu.blp:16
+#: ../data/ui/monitors_flowbox_item.blp:14
+msgid "Wallpaper Mode"
+msgstr "Duvar Kağıdı Kipi"
+
+#: ../data/ui/wp_mode_popover_menu.blp:20
+msgid "Zoom"
+msgstr "Yaklaştır"
+
+#: ../data/ui/wp_mode_popover_menu.blp:25
+msgid "Fit (black background)"
+msgstr "Sığdır (siyah arka plan)"
+
+#: ../data/ui/wp_mode_popover_menu.blp:30
+msgid "Fit (blur)"
+msgstr "Sığdır (bulanık)"
+
+#: ../data/ui/wp_mode_popover_menu.blp:35
+msgid "Center (black backgrond)"
+msgstr "Merkez (siyah arka plan)"
+
+#: ../data/ui/wp_mode_popover_menu.blp:40
+msgid "Center (blur)"
+msgstr "Merkez (bulanık)"
+
+#: ../data/ui/headerbar.blp:6
+msgid "Single Spanned Wallpaper Mode"
+msgstr "Tek Yayılmış Duvar Kağıdı Kipi"
+
+#: ../data/ui/headerbar.blp:10
+msgid "Preferences"
+msgstr "Tercihler"
+
+#: ../data/ui/headerbar.blp:11
+msgid "Shortcuts"
+msgstr "Kısayollar"
+
+#: ../data/ui/headerbar.blp:12
+msgid "About HydraPaper"
+msgstr "HydraPaper Hakkında"
+
+#: ../data/ui/headerbar.blp:28
+msgid "Wallpaper Folders"
+msgstr "Duvar Kağıdı Klasörleri"
+
+#: ../data/ui/headerbar.blp:37
+msgid "Menu"
+msgstr "Menü"
+
+#: ../data/ui/headerbar.blp:46
+msgid "Apply for Dark Mode"
+msgstr "Koyu Kip İçin Uygula"
+
+#: ../data/ui/headerbar.blp:51
+msgid "Apply"
+msgstr "Uygula"
+
+#: ../data/ui/headerbar.blp:60
+msgid "Add to Slideshow"
+msgstr "Slay Gösterisine Ekle"
+
+#: ../data/ui/headerbar.blp:66
+msgid "Manage Slideshow Mode"
+msgstr "Slayt Gösterisi Kipini Yönet"
+
+#: ../data/ui/headerbar.blp:93
+msgid "Slideshow Mode"
+msgstr "Slayt Gösterisi Kipi"
+
+#: ../data/ui/headerbar.blp:104
+msgid "Wallpaper duration"
+msgstr "Duvar kağıdı süresi"
+
+#: ../data/ui/wallpapers_folders_view.blp:21
+msgid "Add Folder"
+msgstr "Klasör Ekle"
+
+#: ../data/ui/wallpapers_folders_view.blp:27
+msgid "Remove Folder"
+msgstr "Klasör Kaldır"
+
+#: ../data/ui/wallpapers_folders_view.blp:36
+msgid "Activate All Folders"
+msgstr "Tüm Klasörleri Etkinleştir"
+
+#: ../data/ui/wallpapers_folders_view.blp:41
+msgid "Deactivate All Folders"
+msgstr "Tüm Klasörleri Pasifleştir"
+
+#: ../data/org.gabmus.hydrapaper.desktop.in:3
+msgid "@prettyname@"
+msgstr "@prettyname@"
+
+#: ../data/org.gabmus.hydrapaper.desktop.in:4
+msgid "Wallpaper manager with multimonitor support"
+msgstr "Çoklu ekran destekli duvar kağıdı yöneticisi"
+
+#: ../data/org.gabmus.hydrapaper.desktop.in:12
+msgid "wallpaper;background;monitor;"
+msgstr "duvar kağıdı;arkaplan;ekran;monitör;monitor;"
+
+#: ../data/org.gabmus.hydrapaper.desktop.in:18
+msgid "Set random wallpapers"
+msgstr "Rastgele duvar kağıtları ayarla"
+
+#: ../data/org.gabmus.hydrapaper.Daemon.desktop.in:3
+msgid "@appid@.Daemon"
+msgstr "@appid@.Daemon"
+
+#: ../data/org.gabmus.hydrapaper.Daemon.desktop.in:4
+msgid "Daemon for HydraPaper"
+msgstr "HydraPaper Artalan Süreci"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:4
+msgid "HydraPaper"
+msgstr "HydraPaper"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:5
+msgid "Gabriele Musco"
+msgstr "Gabriele Musco"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:6
+msgid "Wallpaper manager with multi monitor support"
+msgstr "Çoklu ekran destekli duvar kağıdı yöneticisi"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:15
+msgid ""
+"HydraPaper is a wallpaper manager, specifically designed to work around the "
+"lack of functionality of many desktop environments to set a different "
+"wallpaper for each monitor in a multi monitor setup. It accomplishes this by "
+"scaling and merging different wallpapers into a single one and setting it as "
+"spanned."
+msgstr ""
+"HydraPaper, çoklu ekran kurulumunda her ekran için farklı duvar kağıdı "
+"ayarlamak için birçok masaüstü ortamının işlevsellik eksikliğini gidermek "
+"için özel olarak tasarlanmış bir duvar kağıdı yöneticisidir. Bunu, farklı "
+"duvar kağıtlarını tek bir duvar kağıdında ölçeklendirip birleştirerek ve "
+"yayarak gerçekleştirir."
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:16
+msgid ""
+"It currently supports various desktop environments, including GNOME, MATE, "
+"Cinnamon and Budgie. Experimental support is included for the sway window "
+"manager."
+msgstr ""
+"Şu anda GNOME, MATE, Cinnamon ve Budgie dahil çeşitli masaüstü ortamlarını "
+"desteklemektedir. Sway pencere yöneticisi için deneysel destek dahildir."
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:48
+msgid "Show apply button for dark mode in Ubuntu GNOME sessions"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:56
+msgid "Added separate apply button for dark mode"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:57
+msgid "Show wallpaper names"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:58
+msgid "Added search for file name and resolution"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:66
+msgid ""
+"Wallpaper folder selection popover converted to Flap (auto-hide sidebar)"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:67
+msgid "Updated support for libadwaita to version 1.0.0.alpha.4"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:68
+msgid "Fixed window size save/restore"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:76
+msgid "Added support for heterogeneous DPI scaling"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:77
+msgid "Added support for libadwaita 1.0.0-alpha.2"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:85
+msgid "🚀 HydraPaper has been updated to GTK4 and libadwaita!"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:86
+msgid "Bug fixes for Fit and Center wallpaper modes"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:94
+msgid "Minor improvements to the UI"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:95
+msgid "Improved phone compatibility"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:103
+msgid "Fix for different wallpaper modes not working on single display setups"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:110
+msgid "Fixed random wallpaper"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:117
+msgid "Updated to the latest version of libhandy"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:118
+msgid "New option to set a single wallpaper as spanned across all the monitors"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:119
+msgid "Added Cinnamon support"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:120
+msgid ""
+"New wallpaper modes: set your wallpapers as zoomed, centered or fitted, with "
+"the choice of either a black or a blurred background"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:121
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:139
+msgid "Various improvements and bug fixes"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:128
+msgid "Added Brazilian Portuguese translation"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:129
+msgid "Updated to support the latest version of libhandy"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:130
+msgid "Added more keyboard shortcuts"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:137
+msgid "New icon courtesy of Tobias Bernard"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:138
+msgid "New minimal favorite wallpaper badge"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:147
+msgid "New quick buttons to toggle on/off all wallpaper folders at once"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:155
+msgid "Updated flatpak dependencies and GNOME runtime"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:156
+msgid ""
+"Removed libwnck dependency and functionalities (lower other windows toggle)"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:163
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:193
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:347
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:362
+msgid "Various bug fixes"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:170
+msgid "You can now set lockscreen wallpapers from the command line"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:171
+msgid "New preference to save wallpapers with random names"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:172
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:318
+msgid "Various bug fixes and improvements"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:179
+msgid "Ordering wallpapers folders alphabetically"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:180
+msgid "Fixed folder adding"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:187
+msgid "You can now add multiple folders at once!"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:188
+msgid "Slight design overhaul"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:189
+msgid "Added German and Russian translations (courtesy of Alessandra Gallia)"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:190
+msgid "Redesigned symbolic icon"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:191
+msgid "Initial support for sway (still broken in Flatpak)"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:192
+msgid "Small performance improvements"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:200
+msgid "Fixed conflict between desktop and lockscreen wallpapers"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:207
+msgid ""
+"Merged wallpapers aren't cached anymore. Just keep one and save lots of space"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:214
+msgid "Fixed path enable/disable bug"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:221
+msgid "Moved app menu to the far right"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:222
+msgid "Added view switcher bar when window is too small"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:229
+msgid "Added option to set lockscreen wallpapers in GNOME"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:236
+msgid "Internationalization support and Italian translation"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:237
+msgid "New widgets from Purism's libhandy"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:238
+msgid "Removed animated spinner"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:239
+msgid "Paths in folders view show only the folder name by default"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:240
+msgid "New website"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:247
+msgid "Properly implemented MATE support"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:248
+msgid "Added post-installation commands"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:255
+msgid "Fixing wrong import"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:262
+msgid "Fixed support for MATE under Flatpak"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:269
+msgid "New icon! Should be closer to GNOME HIG."
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:270
+msgid ""
+"Exposed random wallpaper functionality from the in-app menu and desktop file"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:277
+msgid "Added random wallpaper functionality from command line with -r option"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:284
+msgid "Fixing startup error when added folders get deleted"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:291
+msgid "Get correct localized Pictures folder on first startup"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:292
+msgid "App doesn't crash anymore if a folder doesn't exist"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:299
+msgid "Fixed wallpapers not hiding on startup"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:306
+msgid "Complete code refactoring"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:307
+msgid "Made the whole build system more modular"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:308
+msgid "Moved app menu to the headerbar"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:309
+msgid "Initial support for keyboard shortcuts"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:316
+msgid "Fixed thumbnail creation for PNGs with alpha channel"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:317
+msgid "Added option to clear cache"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:325
+msgid "Improved thumbnail generation and caching for better performance"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:332
+msgid "Updated dependencies"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:333
+msgid "Added support for command line usage"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:334
+msgid "Implemented boilerplate for gtk via gmgtk (gitlab.com/gabmus/gmgtk)"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:335
+msgid ""
+"Migrated configuration management to gmconfig (gitlab.com/gabmus/gmconfig)"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:336
+msgid "Migrated to GitLab"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:343
+msgid "Better filename generation"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:344
+msgid "Added support for vertical setups"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:345
+msgid "Added symbolic icon"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:346
+msgid "Added support for MATE"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:354
+msgid "Design makeover"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:355
+msgid "Added longpress/rightclick menu"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:356
+msgid "Implemented favorites"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:357
+msgid "Added option to temporarely disable paths"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:358
+msgid "Added option to minimize/restore all other windows"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:359
+msgid "Improved performance"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:360
+msgid "Various optimizations for flatpak distribution"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:361
+msgid "Removed the dependency on xmltodict"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:369
+msgid "Changed icon"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:370
+msgid "Added support for monitors.xml version 1"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:377
+msgid "Improved 3+ monitors configuration"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:378
+msgid "Remember previously set wallpapers throughout sessions"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:379
+msgid "Implemented cache hitting"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:380
+msgid "Added checks and user friendly error messages for monitors.xml"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:387
+msgid "Bug fixes"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:388
+msgid "Added settings window"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:395
+msgid "Port to pillow"
+msgstr ""
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:402
+msgid "First release"
+msgstr ""

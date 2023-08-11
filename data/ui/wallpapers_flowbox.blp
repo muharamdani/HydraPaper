@@ -1,0 +1,14 @@
+using Gtk 4.0;
+
+template WallpapersFlowbox : ScrolledWindow {
+    styles ["view"]
+    hscrollbar_policy: never;
+    Viewport {
+        FlowBox flowbox {
+            styles ["view", "wallpapers-flowbox"]
+            valign: start; hexpand: true;
+            activate-on-single-click: true;
+            child-activated => on_flowbox_child_activated();
+        }
+    }
+}

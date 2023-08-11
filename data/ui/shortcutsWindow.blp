@@ -1,0 +1,35 @@
+using Gtk 4.0;
+
+ShortcutsWindow shortcuts-hydrapaper {
+    ShortcutsSection {
+        visible: true;
+        section-name: "shortcuts";
+        ShortcutsGroup {
+            title: _("General");
+            ShortcutsShortcut {
+                accelerator: "<ctrl>question";
+                title: C_("shortcut window", "Open keyboard shortcuts");
+            }
+            ShortcutsShortcut {
+                accelerator: "F10";
+                title: C_("shortcut window", "Open menu");
+            }
+            ShortcutsShortcut {
+                accelerator: "<ctrl>f";
+                title: C_("shortcut window", "Search");
+            }
+            ShortcutsShortcut {
+                accelerator: "<ctrl>comma";
+                title: C_("shortcut window", "Open preferences");
+            }
+            ShortcutsShortcut {
+                accelerator: "<ctrl>Q";
+                title: C_("shortcut window", "Quit");
+            }
+            ShortcutsShortcut {
+                accelerator: "<ctrl><shift>R";
+                title: C_("shortcut window", "Set random wallpapers");
+            }
+        }
+    }
+}

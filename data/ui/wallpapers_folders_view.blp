@@ -1,0 +1,47 @@
+using Gtk 4.0;
+
+template WallpapersFoldersView : Box {
+    styles ["background"]
+    orientation: vertical;
+    spacing: 6;
+    ScrolledWindow {
+        hscrollbar-policy: never;
+        vexpand: true;
+        ListBox listbox {
+            styles ["navigation-sidebar"]
+            row-selected => on_listbox_row_selected();
+        }
+    }
+    ActionBar {
+        Box {
+            styles ["linked"]
+            margin-top: 12; margin-bottom: 12;
+            homogeneous: true;
+            Button add_btn {
+                tooltip-text: _("Add Folder");
+                icon-name: "list-add-symbolic";
+                clicked => on_add_btn_clicked();
+            }
+            Button del_btn {
+                sensitive: false;
+                tooltip-text: _("Remove Folder");
+                icon-name: "user-trash-symbolic";
+                clicked => on_del_btn_clicked();
+            }
+        }
+        [end] Box {
+            styles ["linked"]
+            margin-top: 12; margin-bottom: 12;
+            Button activate_all_btn {
+                tooltip-text: _("Activate All Folders");
+                icon-name: "emblem-ok-symbolic";
+                clicked => on_activate_all_btn_clicked();
+            }
+            Button deactivate_all_btn {
+                tooltip-text: _("Deactivate All Folders");
+                icon-name: "window-close-symbolic";
+                clicked => on_deactivate_all_btn_clicked();
+            }
+        }
+    }
+}

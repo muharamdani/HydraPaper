@@ -1,0 +1,46 @@
+using Gtk 4.0;
+
+template WallpaperModePopoverContent : ScrolledWindow {
+    hscrollbar-policy: never; vscrollbar-policy: never;
+    Stack {
+        StackPage main {
+            name: "main";
+            child: Box menu_box {
+                margin-start: 6; margin-end: 6;
+                margin-top: 6; margin-bottom: 6;
+                orientation: vertical;
+                spacing: 6;
+                Label {
+                    styles ["dim-label"]
+                    xalign: 0.0;
+                    label: _("Wallpaper Mode");
+                }
+                CheckButton radio_zoom {
+                    halign: start;
+                    label: _("Zoom");
+                    active: true;
+                }
+                CheckButton radio_fit_black {
+                    halign: start;
+                    label: _("Fit (black background)");
+                    group: radio_zoom;
+                }
+                CheckButton radio_fit_blur {
+                    halign: start;
+                    label: _("Fit (blur)");
+                    group: radio_zoom;
+                }
+                CheckButton radio_center_black {
+                    halign: start;
+                    label: _("Center (black backgrond)");
+                    group: radio_zoom;
+                }
+                CheckButton radio_center_blur {
+                    halign: start;
+                    label: _("Center (blur)");
+                    group: radio_zoom;
+                }
+            };
+        }
+    }
+}

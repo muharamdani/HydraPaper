@@ -1,0 +1,803 @@
+# French translations for hydrapaper package.
+# Copyright (C) 2022 THE hydrapaper'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the hydrapaper package.
+# Irénée THIRION <irenee.thirion@e.email>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hydrapaper 3.3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-23 00:19+0200\n"
+"PO-Revision-Date: 2022-05-23 17:03+0200\n"
+"Last-Translator: Irénée THIRION <irenee.thirion@e.email>\n"
+"Language-Team: French <traduc@traduc.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: ../hydrapaper/__main__.py:112
+#, python-brace-format
+msgid "Error: you passed {0} wallpapers for {1} monitors"
+msgstr "Erreur : vous avez passé {0} fonds d'écran pour {1} écrans"
+
+#: ../hydrapaper/__main__.py:121
+#, python-brace-format
+msgid "Error: you passed {0} modes for {1} wallpapers"
+msgstr "Erreur : vous avez passé {0} modes pour {1} fonds d'écran"
+
+#: ../hydrapaper/__main__.py:130
+#, python-brace-format
+msgid ""
+"Error: wallpaper mode {0} is not valid. Allowed values are: zoom, fit_black, "
+"fit_blur, center_black, center_blur"
+msgstr ""
+"Erreur : le mode de fond d'écran {0} n'est pas valide. Les valeurs "
+"autorisées sont : zoom, centré_noir, centré_flou, ajusté_noir, ajusté_flou"
+
+#: ../hydrapaper/__main__.py:140
+#, python-brace-format
+msgid "Error: {0} is not a valid image path"
+msgstr "Erreur : {0} n'est pas un chemin d'image valide"
+
+#: ../hydrapaper/__main__.py:196
+msgid "set wallpapers from command line"
+msgstr "définir les fonds d'écran par ligne de commande"
+
+#: ../hydrapaper/__main__.py:202
+msgid ""
+"specify the modes for the wallpapers (zoom, center_black, center_blur, "
+"fit_black, fit_blur)"
+msgstr ""
+"spécifier les modes pour les fonds d'écran (zoom, centré_noir, centré_flou, "
+"ajusté_noir, ajusté_flou)"
+
+#: ../hydrapaper/__main__.py:209
+msgid "set the dark mode wallpapers (specific to GNOME 42+)"
+msgstr "définir les fonds d'écran de mode sombre (pour GNOME 42+)"
+
+#: ../hydrapaper/__main__.py:215
+msgid "set wallpapers randomly"
+msgstr "définir les fonds d'écran de manière aléatoire"
+
+#: ../hydrapaper/base_preferences.py:106
+msgid "Choose a folder"
+msgstr "Choisissez un dossier"
+
+#: ../hydrapaper/main_stack.py:19
+msgid "Wallpapers"
+msgstr "Fonds d'écran"
+
+#: ../hydrapaper/main_stack.py:24
+msgid "Favorites"
+msgstr "Favoris"
+
+#: ../hydrapaper/monitor_parser.py:116
+msgid "Error parsing monitors (Gdk)"
+msgstr "Erreur lors de l'analyse des écrans (Gdk)"
+
+#: ../hydrapaper/monitor_parser.py:156
+msgid "Combined spanned monitor"
+msgstr "Écran combiné étendu"
+
+#: ../hydrapaper/preferences_window.py:18
+msgid "Start daemon on login"
+msgstr "Démarrer le daemon lors de la connexion"
+
+#: ../hydrapaper/preferences_window.py:19
+msgid "React to monitor changes and start slideshow mode"
+msgstr "Réagir au changement d'écran et commencer le mode diaporama"
+
+#: ../hydrapaper/preferences_window.py:79
+msgid "Save each wallpaper separately"
+msgstr "Enregistrer chaque fond d'écran séparément"
+
+#: ../hydrapaper/preferences_window.py:81
+msgid ""
+"Warning: this feature will use a lot of disk space. Periodically clear the "
+"cache to mitigate this problem"
+msgstr ""
+"Attention : cette fonctionnalité utilisera beaucoup d'espace disque. Videz "
+"le cache périodiquement pour éviter ce problème"
+
+#: ../hydrapaper/preferences_window.py:91
+msgid "Enable daemon"
+msgstr "Activer le daemon"
+
+#: ../hydrapaper/preferences_window.py:93
+msgid "Needed for slideshow mode and to detect display changes"
+msgstr "Utilisé pour le mode diaporama et détecter les changements d'affichage"
+
+#: ../hydrapaper/preferences_window.py:101
+msgid "General"
+msgstr "Général"
+
+#: ../hydrapaper/preferences_window.py:104
+msgid "General preferences"
+msgstr "Paramètres généraux"
+
+#: ../hydrapaper/preferences_window.py:107
+msgid "Cache and favorites"
+msgstr "Cache et favoris"
+
+#: ../hydrapaper/preferences_window.py:109
+msgid "Clear favorites"
+msgstr "Vider les favoris"
+
+#: ../hydrapaper/preferences_window.py:110
+#: ../hydrapaper/preferences_window.py:117
+msgid "Clear"
+msgstr "Vider"
+
+#: ../hydrapaper/preferences_window.py:116
+msgid "Clear caches"
+msgstr "Vider le cache"
+
+#: ../hydrapaper/preferences_window.py:143
+msgid "Appearance"
+msgstr "Apparence"
+
+#: ../hydrapaper/preferences_window.py:146
+msgid "Appearance preferences"
+msgstr "Préférences d'apparence"
+
+#: ../hydrapaper/preferences_window.py:148
+msgid "Dark mode"
+msgstr "Mode sombre"
+
+#: ../hydrapaper/preferences_window.py:154
+msgid "Use big thumbnails for the monitors previews"
+msgstr "Utiliser de grandes miniatures pour la prévisualisation des écrans"
+
+#: ../hydrapaper/preferences_window.py:160
+msgid "Show full path in folder view"
+msgstr "Montrer le chemin entier dans la vue des dossiers"
+
+#: ../hydrapaper/slideshow_listbox_row.py:30
+msgid "Move up"
+msgstr "Déplacer vers le haut"
+
+#: ../hydrapaper/slideshow_listbox_row.py:35
+msgid "Remove"
+msgstr "Supprimer"
+
+#: ../hydrapaper/slideshow_listbox_row.py:40
+msgid "Move down"
+msgstr "Déplacer vers le bas"
+
+#: ../hydrapaper/wallpaper_flowbox_item.py:32
+msgid "Remove favorite"
+msgstr "Supprimer des favoris"
+
+#: ../hydrapaper/wallpaper_flowbox_item.py:34
+msgid "Add favorite"
+msgstr "Ajouter aux favoris"
+
+#: ../hydrapaper/wallpaper_flowbox_item.py:155
+msgid "ERROR: cannot create thumbnail for file"
+msgstr "Erreur : impossible de créer une miniature pour le fichier"
+
+#: ../hydrapaper/wallpapers_folders_view.py:55
+msgid "Add wallpaper folders"
+msgstr "Ajouter des dossiers de fonds d'écran"
+
+#: ../data/ui/headerbar.blp:6
+msgid "Single Spanned Wallpaper Mode"
+msgstr "Mode fond d'écran unique étendu"
+
+#: ../data/ui/headerbar.blp:7 ../data/ui/shortcutsWindow.blp:31
+msgid "Set Random Wallpapers"
+msgstr "Définir des fonds d'écran aléatoires"
+
+#: ../data/ui/headerbar.blp:10
+msgid "Preferences"
+msgstr "Préférences"
+
+#: ../data/ui/headerbar.blp:11
+msgid "Shortcuts"
+msgstr "Raccourcis"
+
+#: ../data/ui/headerbar.blp:12
+msgid "About HydraPaper"
+msgstr "À propos de HydraPaper"
+
+#: ../data/ui/headerbar.blp:28
+msgid "Wallpaper Folders"
+msgstr "Dossiers de fonds d'écran"
+
+#: ../data/ui/headerbar.blp:33 ../data/ui/shortcutsWindow.blp:19
+msgid "Search"
+msgstr "Rechercher"
+
+#: ../data/ui/headerbar.blp:37
+msgid "Menu"
+msgstr "Menu"
+
+#: ../data/ui/headerbar.blp:46
+msgid "Apply for Dark Mode"
+msgstr "Appliquer pour le mode sombre"
+
+#: ../data/ui/headerbar.blp:51
+msgid "Apply"
+msgstr "Appliquer"
+
+#: ../data/ui/headerbar.blp:60
+msgid "Add to Slideshow"
+msgstr "Ajouter au diaporama"
+
+#: ../data/ui/headerbar.blp:66
+msgid "Manage Slideshow Mode"
+msgstr "Gérer le mode diaporama"
+
+#: ../data/ui/headerbar.blp:93
+msgid "Slideshow Mode"
+msgstr "Mode diaporama"
+
+#: ../data/ui/headerbar.blp:104
+msgid "Wallpaper duration"
+msgstr "Durée du fond d'écran"
+
+#: ../data/ui/monitors_flowbox_item.blp:14
+#: ../data/ui/wp_mode_popover_menu.blp:16
+msgid "Wallpaper Mode"
+msgstr "Mode de fond d'écran"
+
+#: ../data/ui/shortcutsWindow.blp:11
+msgid "Open Keyboard Shortcuts"
+msgstr "Ouvrir les Raccourcis clavier"
+
+#: ../data/ui/shortcutsWindow.blp:15
+msgid "Open Menu"
+msgstr "Ouvrir le Menu"
+
+#: ../data/ui/shortcutsWindow.blp:23
+msgid "Open Preferences"
+msgstr "Ouvrir les Préférences"
+
+#: ../data/ui/shortcutsWindow.blp:27
+msgid "Quit"
+msgstr "Quitter"
+
+#: ../data/ui/wallpaper_flowbox_item_popover.blp:18
+msgid "Add Favorite"
+msgstr "Ajouter aux favoris"
+
+#: ../data/ui/wallpaper_flowbox_item_popover.blp:27
+msgid "Path:"
+msgstr "Chemin :"
+
+#: ../data/ui/wallpapers_folders_view.blp:21
+msgid "Add Folder"
+msgstr "Ajouter le dossier"
+
+#: ../data/ui/wallpapers_folders_view.blp:27
+msgid "Remove Folder"
+msgstr "Supprimer le dossier"
+
+#: ../data/ui/wallpapers_folders_view.blp:36
+msgid "Activate All Folders"
+msgstr "Activer tous les dossiers"
+
+#: ../data/ui/wallpapers_folders_view.blp:41
+msgid "Deactivate All Folders"
+msgstr "Désactiver tous les dossiers"
+
+#: ../data/ui/wp_mode_popover_menu.blp:20
+msgid "Zoom"
+msgstr "Zoom"
+
+#: ../data/ui/wp_mode_popover_menu.blp:25
+msgid "Fit (black background)"
+msgstr "Ajuster (fond noir)"
+
+#: ../data/ui/wp_mode_popover_menu.blp:30
+msgid "Fit (blur)"
+msgstr "Ajuster (flou)"
+
+#: ../data/ui/wp_mode_popover_menu.blp:35
+msgid "Center (black backgrond)"
+msgstr "Centrer (fond noir)"
+
+#: ../data/ui/wp_mode_popover_menu.blp:40
+msgid "Center (blur)"
+msgstr "Centrer (flou)"
+
+#: ../data/org.gabmus.hydrapaper.Daemon.desktop.in:3
+msgid "@appid@.Daemon"
+msgstr "@appid@.Daemon"
+
+#: ../data/org.gabmus.hydrapaper.Daemon.desktop.in:4
+msgid "Daemon for HydraPaper"
+msgstr "Daemon pour HydraPaper"
+
+#: ../data/org.gabmus.hydrapaper.desktop.in:3
+msgid "@prettyname@"
+msgstr "@prettyname@"
+
+#: ../data/org.gabmus.hydrapaper.desktop.in:4
+msgid "Wallpaper manager with multimonitor support"
+msgstr "Gestionnaire de fonds d'écran avec support pour de multiples écrans"
+
+#: ../data/org.gabmus.hydrapaper.desktop.in:12
+msgid "wallpaper;background;monitor;"
+msgstr "wallpaper;background;monitor;écran;arrière-plan;fond;"
+
+#: ../data/org.gabmus.hydrapaper.desktop.in:18
+msgid "Set random wallpapers"
+msgstr "Définir des fonds d'écran aléatoires"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:4
+msgid "HydraPaper"
+msgstr "HydraPaper"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:5
+msgid "Gabriele Musco"
+msgstr "Gabriele Musco"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:6
+msgid "Wallpaper manager with multi monitor support"
+msgstr "Gestionnaire de fonds d'écran avec support pour de multiples écrans"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:15
+msgid ""
+"HydraPaper is a wallpaper manager, specifically designed to work around the "
+"lack of functionality of many desktop environments to set a different "
+"wallpaper for each monitor in a multi monitor setup. It accomplishes this by "
+"scaling and merging different wallpapers into a single one and setting it as "
+"spanned."
+msgstr ""
+"HydraPaper est un gestionnaire de fonds d'écran, étudié spécialement pour "
+"contourner le manque de fonctionnalité de nombreux environnements de bureau "
+"pour définir un fond d'écran différent pour chaque écran, dans une "
+"configuration multi-écrans. Il permet cela en mettant à l'échelle et en "
+"fusionnant différents fonds d'écran en un seul et en le définissant comme "
+"étendu."
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:16
+msgid ""
+"It currently supports various desktop environments, including GNOME, MATE, "
+"Cinnamon and Budgie. Experimental support is included for the sway window "
+"manager."
+msgstr ""
+"Il supporte actuellement différents environnements de bureau incluant GNOME, "
+"MATE, Cinnamon et Budgie. Un support expérimental est inclus pour le "
+"gestionnaire de fenêtre sway."
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:48
+msgid "Show apply button for dark mode in Ubuntu GNOME sessions"
+msgstr ""
+"Montre le bouton « appliquer » pour le mode sombre dans les sessions Ubuntu "
+"GNOME"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:56
+msgid "Added separate apply button for dark mode"
+msgstr "Ajout d'un bouton « appliquer » séparé pour le mode sombre"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:57
+msgid "Show wallpaper names"
+msgstr "Montre les noms des fonds d'écran"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:58
+msgid "Added search for file name and resolution"
+msgstr "Ajout de la recherche par nom de fichier et résolution"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:66
+msgid ""
+"Wallpaper folder selection popover converted to Flap (auto-hide sidebar)"
+msgstr ""
+"Le fenêtre contextuelle de sélection des dossiers de fond d'écran a été "
+"convertie en volet (masquage automatique de la barre latérale)."
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:67
+msgid "Updated support for libadwaita to version 1.0.0.alpha.4"
+msgstr "Mise à jour du support pour libadwaita vers la version 1.0.0.alpha.4"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:68
+msgid "Fixed window size save/restore"
+msgstr ""
+"Correction de l'enregistrement / restauration de la taille de la fenêtre"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:76
+msgid "Added support for heterogeneous DPI scaling"
+msgstr ""
+"Ajout de la prise en charge de la mise à l'échelle pour des DPI hétérogènes"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:77
+msgid "Added support for libadwaita 1.0.0-alpha.2"
+msgstr "Ajout du support pour libadwaita 1.0.0-alpha.2"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:85
+msgid "🚀 HydraPaper has been updated to GTK4 and libadwaita!"
+msgstr "🚀 HydraPaper a été mis à jour vers GTK4 et libadwaita !"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:86
+msgid "Bug fixes for Fit and Center wallpaper modes"
+msgstr "Correction de bogues pour les modes de fond d'écran Ajusté et Centré"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:94
+msgid "Minor improvements to the UI"
+msgstr "Améliorations mineures pour l'interface"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:95
+msgid "Improved phone compatibility"
+msgstr "Compatibilité pour les téléphones améliorée"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:103
+msgid "Fix for different wallpaper modes not working on single display setups"
+msgstr ""
+"Correction pour différents modes de fond d'écran ne fonctionnant pas sur des "
+"configurations comportant un seul écran"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:110
+msgid "Fixed random wallpaper"
+msgstr "Correction de la fonction fond d'écran aléatoire"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:117
+msgid "Updated to the latest version of libhandy"
+msgstr "Mise à jour vers la dernière version de libhandy"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:118
+msgid "New option to set a single wallpaper as spanned across all the monitors"
+msgstr ""
+"Nouvelle option pour définir un unique fond d'écran étendu pour tous les "
+"écrans"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:119
+msgid "Added Cinnamon support"
+msgstr "Ajout du support pour l'environnement de bureau Cinnamon"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:120
+msgid ""
+"New wallpaper modes: set your wallpapers as zoomed, centered or fitted, with "
+"the choice of either a black or a blurred background"
+msgstr ""
+"Nouveaux modes de fonds d'écran : définissez vos fonds d'écran comme "
+"agrandis, centrés ou ajustés, avec le choix d'un fond noir ou flou"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:121
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:139
+msgid "Various improvements and bug fixes"
+msgstr "Diverses améliorations et corrections de bogues"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:128
+msgid "Added Brazilian Portuguese translation"
+msgstr "Ajout d'une traduction en portugais brésilien"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:129
+msgid "Updated to support the latest version of libhandy"
+msgstr "Mise à jour vers la dernière version de libhandy"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:130
+msgid "Added more keyboard shortcuts"
+msgstr "Ajout de plus de raccourcis clavier"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:137
+msgid "New icon courtesy of Tobias Bernard"
+msgstr "Nouvelle icône grâce à Tobias Bernard"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:138
+msgid "New minimal favorite wallpaper badge"
+msgstr "Nouveau badge minimaliste de fond d'écran favori"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:147
+msgid "New quick buttons to toggle on/off all wallpaper folders at once"
+msgstr ""
+"Nouveaux boutons rapides pour activer / désactiver tous les dossiers de "
+"fonds d'écran à la fois"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:155
+msgid "Updated flatpak dependencies and GNOME runtime"
+msgstr ""
+"Mise à jour des dépendances flatpak et de l'environnement d'exécution GNOME"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:156
+msgid ""
+"Removed libwnck dependency and functionalities (lower other windows toggle)"
+msgstr ""
+"Suppression de la dépendance et des fonctionnalités de libwnck (bouton pour "
+"minimiser d'autres fenêtres)"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:163
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:193
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:347
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:362
+msgid "Various bug fixes"
+msgstr "Diverses corrections de bogues"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:170
+msgid "You can now set lockscreen wallpapers from the command line"
+msgstr ""
+"Vous pouvez désormais définir des fonds d'écran de verrouillage depuis la "
+"commande en ligne"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:171
+msgid "New preference to save wallpapers with random names"
+msgstr ""
+"Nouveau paramètre pour enregistrer des fonds d'écran avec des noms aléatoires"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:172
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:318
+msgid "Various bug fixes and improvements"
+msgstr "Diverses corrections de bogues et améliorations"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:179
+msgid "Ordering wallpapers folders alphabetically"
+msgstr "Tri des dossiers d'arrière-plans par ordre alphabétique"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:180
+msgid "Fixed folder adding"
+msgstr "Correction de l'ajout de dossiers"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:187
+msgid "You can now add multiple folders at once!"
+msgstr "Vous pouvez maintenant ajouter de multiples dossiers en une fois !"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:188
+msgid "Slight design overhaul"
+msgstr "Légère refonte du design"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:189
+msgid "Added German and Russian translations (courtesy of Alessandra Gallia)"
+msgstr ""
+"Ajout de traductions en allemand et en russe (grâce à Alessandra Gallia)"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:190
+msgid "Redesigned symbolic icon"
+msgstr "Redesign de l'icône symbolique"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:191
+msgid "Initial support for sway (still broken in Flatpak)"
+msgstr ""
+"Support initial pour sway (ne marche pas pour les installations Flatpak)"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:192
+msgid "Small performance improvements"
+msgstr "Petites améliorations de performance"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:200
+msgid "Fixed conflict between desktop and lockscreen wallpapers"
+msgstr "Corrige le conflit entre fond d'écran de bureau et de verrouillage"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:207
+msgid ""
+"Merged wallpapers aren't cached anymore. Just keep one and save lots of space"
+msgstr ""
+"Les fonds d'écran fusionnés ne sont plus mis en cache. Gardez-en un et "
+"économisez beaucoup d'espace"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:214
+msgid "Fixed path enable/disable bug"
+msgstr "Corrige le bogue d'activation / désactivation des chemins"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:221
+msgid "Moved app menu to the far right"
+msgstr "Menu d'application déplacé tout à droite"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:222
+msgid "Added view switcher bar when window is too small"
+msgstr ""
+"Ajout d'une barre de changement d'affichage lorsque la fenêtre est trop "
+"petite"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:229
+msgid "Added option to set lockscreen wallpapers in GNOME"
+msgstr ""
+"Ajout d'une option pour définir un fond d'écran de verrouillage pour GNOME"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:236
+msgid "Internationalization support and Italian translation"
+msgstr "Support de traductions multilingues et traduction italienne"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:237
+msgid "New widgets from Purism's libhandy"
+msgstr "Nouveaux widgets dans le style libhandy de Purism"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:238
+msgid "Removed animated spinner"
+msgstr "Suppression de la toupie animée"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:239
+msgid "Paths in folders view show only the folder name by default"
+msgstr ""
+"Les chemins dans la vue des dossiers montrent seulement le nom du dossier "
+"par défaut"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:240
+msgid "New website"
+msgstr "Nouveau site web"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:247
+msgid "Properly implemented MATE support"
+msgstr "Support pour MATE implémenté proprement"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:248
+msgid "Added post-installation commands"
+msgstr "Ajout de commandes post-installation"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:255
+msgid "Fixing wrong import"
+msgstr "Correction du mauvais import"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:262
+msgid "Fixed support for MATE under Flatpak"
+msgstr "Correction du support pour MATE pour les Flatpaks"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:269
+msgid "New icon! Should be closer to GNOME HIG."
+msgstr "Nouvelle icône ! Plus proche des directives d'interface de GNOME."
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:270
+msgid ""
+"Exposed random wallpaper functionality from the in-app menu and desktop file"
+msgstr ""
+"Exposition de la fonctionnalité de fond d'écran aléatoire depuis le menu de "
+"l'application et le fichier de bureau"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:277
+msgid "Added random wallpaper functionality from command line with -r option"
+msgstr ""
+"Ajout d'une fonctionnalité d'arrière-plans aléatoires en ligne de commande "
+"avec l'option -r"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:284
+msgid "Fixing startup error when added folders get deleted"
+msgstr ""
+"Correction de l'erreur de démarrage quand des dossiers ajoutés sont supprimés"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:291
+msgid "Get correct localized Pictures folder on first startup"
+msgstr "Dossier d'images localisé correct au premier démarrage"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:292
+msgid "App doesn't crash anymore if a folder doesn't exist"
+msgstr "L'application ne plante plus si un dossier n'existe pas"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:299
+msgid "Fixed wallpapers not hiding on startup"
+msgstr "Correction des arrière-plans non-cachés au démarrage"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:306
+msgid "Complete code refactoring"
+msgstr "Refonte complète du code"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:307
+msgid "Made the whole build system more modular"
+msgstr "Ensemble du système de construction rendu plus modulaire"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:308
+msgid "Moved app menu to the headerbar"
+msgstr "Menu d'application déplacé vers la barre du haut"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:309
+msgid "Initial support for keyboard shortcuts"
+msgstr "Support initial pour les raccourcis clavier"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:316
+msgid "Fixed thumbnail creation for PNGs with alpha channel"
+msgstr "Corrige la création de vignettes pour fichiers PNG avec le canal alpha"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:317
+msgid "Added option to clear cache"
+msgstr "Ajout d'une option pour vider le cache"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:325
+msgid "Improved thumbnail generation and caching for better performance"
+msgstr ""
+"Amélioration de la génération de vignettes et de la mise en cache pour de "
+"meilleures performances"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:332
+msgid "Updated dependencies"
+msgstr "Dépendances mises à jour"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:333
+msgid "Added support for command line usage"
+msgstr "Ajout du support pour l'utilisation en ligne de commande"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:334
+msgid "Implemented boilerplate for gtk via gmgtk (gitlab.com/gabmus/gmgtk)"
+msgstr ""
+"Implémentation de boilerplate pour GTK via gmgtk (gitlab.com/gabmus/gmgtk)"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:335
+msgid ""
+"Migrated configuration management to gmconfig (gitlab.com/gabmus/gmconfig)"
+msgstr ""
+"Migration de la gestion de la configuration vers gmconfig (gitlab.com/gabmus/"
+"gmconfig)"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:336
+msgid "Migrated to GitLab"
+msgstr "Migration vers GitLab"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:343
+msgid "Better filename generation"
+msgstr "Meilleure génération de noms de fichiers"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:344
+msgid "Added support for vertical setups"
+msgstr "Ajout du support pour les configurations verticales"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:345
+msgid "Added symbolic icon"
+msgstr "Ajout d'une icône symbolique"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:346
+msgid "Added support for MATE"
+msgstr "Ajout du support pour MATE"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:354
+msgid "Design makeover"
+msgstr "Refonte du design"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:355
+msgid "Added longpress/rightclick menu"
+msgstr "Ajout du menu pression longue / clic droit"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:356
+msgid "Implemented favorites"
+msgstr "Implémentation des favoris"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:357
+msgid "Added option to temporarely disable paths"
+msgstr "Ajout de l'option pour désactiver temporairement les chemins"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:358
+msgid "Added option to minimize/restore all other windows"
+msgstr "Ajout de l'option minimiser / restaurer toutes les autres fenêtres"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:359
+msgid "Improved performance"
+msgstr "Performance améliorée"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:360
+msgid "Various optimizations for flatpak distribution"
+msgstr "Diverses optimisations pour la distribution via flatpak"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:361
+msgid "Removed the dependency on xmltodict"
+msgstr "Suppression de la dépendance sur xmltodict"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:369
+msgid "Changed icon"
+msgstr "Icône changée"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:370
+msgid "Added support for monitors.xml version 1"
+msgstr "Ajout du support pour la version 1 de monitors.xml"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:377
+msgid "Improved 3+ monitors configuration"
+msgstr "Amélioration de la configuration de 3 écrans ou +"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:378
+msgid "Remember previously set wallpapers throughout sessions"
+msgstr ""
+"Mémorise les fonds d'écran précédemment définis tout au long des sessions"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:379
+msgid "Implemented cache hitting"
+msgstr "Implémentation de la recherche de cache"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:380
+msgid "Added checks and user friendly error messages for monitors.xml"
+msgstr ""
+"Ajout de vérifications et de messages d'erreur conviviaux pour monitors.xml"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:387
+msgid "Bug fixes"
+msgstr "Correction de bogues"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:388
+msgid "Added settings window"
+msgstr "Ajout d'une fenêtre de paramètres"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:395
+msgid "Port to pillow"
+msgstr "Portage vers pillow"
+
+#: ../data/org.gabmus.hydrapaper.appdata.xml.in:402
+msgid "First release"
+msgstr "Première version"
