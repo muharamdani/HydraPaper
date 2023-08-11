@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "hydrapaper"
+version = "3.3.1"
+description = "Wallpaper manager with multimonitor support"
+authors = ["Gabriele Musco <gabmus@disroot.org>"]
+license = "GPL-3.0+"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Pillow = "^9.5.0"
+dbus-python = "1.2.18"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

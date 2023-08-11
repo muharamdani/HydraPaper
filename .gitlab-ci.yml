@@ -1,0 +1,20 @@
+include: 'https://gitlab.gnome.org/GNOME/citemplates/raw/master/flatpak/flatpak_ci_initiative.yml'
+
+variables:
+    BUNDLE: "hydrapaper.flatpak"
+
+test:
+    image: python:3.9
+    script:
+        - pip install flake8
+        - flake8 hydrapaper
+
+flatpak:
+    image: 'registry.gitlab.gnome.org/gnome/gnome-runtime-images/gnome:master'
+    variables:
+        MANIFEST_PATH: "dist/flatpak/org.gabmus.hydrapaper.json"
+        MESON_ARGS: "-Dprofile=Devel"
+        FLATPAK_MODULE: "hydrapaper"
+        RUNTIME_REPO: "https://flathub.org/repo/flathub.flatpakrepo"
+        APP_ID: "org.gabmus.hydrapaper"
+    extends: .flatpak

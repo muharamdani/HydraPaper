@@ -1,0 +1,114 @@
+{
+    "app-id": "org.gabmus.hydrapaper",
+    "command": "hydrapaper",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "3.36",
+    "sdk": "org.gnome.Sdk",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--talk-name=org.gnome.SettingsDaemon",
+        "--talk-name=org.freedesktop.Flatpak",
+        "--filesystem=home:ro",
+        "--filesystem=host",
+        "--filesystem=xdg-run/dconf",
+        "--filesystem=~/.config/dconf:ro",
+        "--filesystem=~/.config/sway/config:rw",
+        "--filesystem=~/.swaylock/config:rw",
+        "--talk-name=ca.desrt.dconf",
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+    ],
+    "modules": [
+        {
+            "name": "libhandy",
+            "buildsystem": "meson",
+            "config-opts": [
+                "--buildtype=release"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/libhandy",
+                    "tag": "0.84.0"
+                }
+            ]
+        },
+        {
+            "name": "python-pillow",
+            "buildsystem": "simple",
+            "ensure-writable": [
+                "/lib/python*/site-packages/easy-install.pth",
+                "/lib/python*/site-packages/setuptools.pth",
+                "/app/lib/python*/site-packages/easy-install.pth",
+                "/app/lib/python*/site-packages/setuptools.pth"
+            ],
+            "build-commands": [
+                "python3 setup.py install --prefix=/app --root=/"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/python-pillow/Pillow",
+                    "tag": "7.2.0"
+                },
+                {
+                    "type": "shell",
+                    "commands": [
+                        "sed -i 's/if not platform_/if not dirs/' setup.py"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "mate-desktop-background-gschema",
+            "buildsystem": "simple",
+            "build-commands": [
+                "mkdir -p /app/share/glib-2.0/schemas/",
+                "sed 's#@datadir@#\\/usr\\/share#g' schemas/org.mate.background.gschema.xml.in > schemas/org.mate.background.gschema.xml",
+                "install schemas/org.mate.background.gschema.xml /app/share/glib-2.0/schemas/",
+                "glib-compile-schemas /app/share/glib-2.0/schemas"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/mate-desktop/mate-desktop",
+                    "tag": "v1.24.0"
+                }
+            ]
+        },
+        {
+            "name": "cinnamon-desktop-background-gschema",
+            "buildsystem": "simple",
+            "build-commands": [
+                "glib-mkenums --comments '<!-- @comment@ -->' --fhead '<schemalist>' --vhead $'  <@type@ id=\\'org.cinnamon.desktop.@EnumName@\\'>' --vprod $'    <value nick=\\'@valuenick@\\' value=\\'@valuenum@\\'/>' --vtail '  </@type@>' --ftail '</schemalist>' libcinnamon-desktop/cdesktop-enums.h > org.cinnamon.desktop.enums.xml",
+                "install org.cinnamon.desktop.enums.xml /app/share/glib-2.0/schemas/",
+                "sed 's#@datadir@#\\/usr\\/share#g;s#_summary#summary#g;s#_description#description#g' schemas/org.cinnamon.desktop.background.gschema.xml.in.in > org.cinnamon.desktop.background.gschema.xml",
+                "install org.cinnamon.desktop.background.gschema.xml /app/share/glib-2.0/schemas/",
+                "glib-compile-schemas /app/share/glib-2.0/schemas"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/linuxmint/cinnamon-desktop",
+                    "tag": "4.6.3"
+                }
+            ]
+        },
+        {
+            "name": "hydrapaper",
+            "buildsystem": "meson",
+            "builddir": true,
+            "config-opts": [
+                "--buildtype=release"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GabMus/HydraPaper",
+                    "tag": "1.12"
+                }
+            ]
+        }
+    ]
+}

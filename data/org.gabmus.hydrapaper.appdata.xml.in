@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+    <id>org.gabmus.hydrapaper</id>
+    <name>HydraPaper</name>
+    <developer_name>Gabriele Musco</developer_name>
+    <summary>Wallpaper manager with multi monitor support</summary>
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>GPL-3.0+</project_license>
+    <!--<recommends>
+        <control>pointing</control>
+        <control>keyboard</control>
+        <control>touch</control>
+    </recommends>-->
+    <description>
+        <p>HydraPaper is a wallpaper manager, specifically designed to work around the lack of functionality of many desktop environments to set a different wallpaper for each monitor in a multi monitor setup. It accomplishes this by scaling and merging different wallpapers into a single one and setting it as spanned.</p>
+        <p>It currently supports various desktop environments, including GNOME, MATE, Cinnamon and Budgie. Experimental support is included for the sway window manager.</p>
+    </description>
+    <launchable type="desktop-id">org.gabmus.hydrapaper.desktop</launchable>
+    <screenshots>
+        <screenshot type="default">
+            <image>https://gitlab.gnome.org/GabMus/HydraPaper/-/raw/website/static/screenshots/mainwindow.png</image>
+        </screenshot>
+        <screenshot>
+            <image>https://gitlab.gnome.org/GabMus/HydraPaper/-/raw/website/static/screenshots/folders.png</image>
+        </screenshot>
+        <screenshot>
+            <image>https://gitlab.gnome.org/GabMus/HydraPaper/-/raw/website/static/screenshots/favorites.png</image>
+        </screenshot>
+        <screenshot>
+            <image>https://gitlab.gnome.org/GabMus/HydraPaper/-/raw/website/static/screenshots/random.png</image>
+        </screenshot>
+        <screenshot>
+            <image>https://gitlab.gnome.org/GabMus/HydraPaper/-/raw/website/static/screenshots/preferences.png</image>
+        </screenshot>
+        <screenshot>
+            <image>https://gitlab.gnome.org/GabMus/HydraPaper/-/raw/website/static/screenshots/modes.png</image>
+        </screenshot>
+    </screenshots>
+    <url type="homepage">https://hydrapaper.gabmus.org</url>
+    <url type="bugtracker">https://gitlab.gnome.org/gabmus/hydrapaper/-/issues</url>
+    <url type="translate">https://gitlab.gnome.org/gabmus/hydrapaper/-/tree/master/po</url>
+    <url type="donation">https://liberapay.com/gabmus/donate</url>
+    <update_contact>gabmus@disroot.org</update_contact>
+    <releases>
+        <release version="3.3.1" timestamp="1651127251">
+            <description>
+                <ul>
+                    <li>Show apply button for dark mode in Ubuntu GNOME sessions</li>
+                </ul>
+            </description>
+        </release>
+
+        <release version="3.3.0" timestamp="1650700311">
+            <description>
+                <ul>
+                    <li>Added separate apply button for dark mode</li>
+                    <li>Show wallpaper names</li>
+                    <li>Added search for file name and resolution</li>
+                </ul>
+            </description>
+        </release>
+
+        <release version="3.2.0" timestamp="1636995847">
+            <description>
+                <ul>
+                    <li>Wallpaper folder selection popover converted to Flap (auto-hide sidebar)</li>
+                    <li>Updated support for libadwaita to version 1.0.0.alpha.4</li>
+                    <li>Fixed window size save/restore</li>
+                </ul>
+            </description>
+        </release>
+
+        <release version="3.1.0" timestamp="1632133948">
+            <description>
+                <ul>
+                    <li>Added support for heterogeneous DPI scaling</li>
+                    <li>Added support for libadwaita 1.0.0-alpha.2</li>
+                </ul>
+            </description>
+        </release>
+
+        <release version="3.0.0" timestamp="1623351996">
+            <description>
+                <ul>
+                    <li>🚀 HydraPaper has been updated to GTK4 and libadwaita!</li>
+                    <li>Bug fixes for Fit and Center wallpaper modes</li>
+                </ul>
+            </description>
+        </release>
+
+        <release version="2.0.3" timestamp="1605102372">
+            <description>
+                <ul>
+                    <li>Minor improvements to the UI</li>
+                    <li>Improved phone compatibility</li>
+                </ul>
+            </description>
+        </release>
+
+        <release version="2.0.2" timestamp="1602758503">
+            <description>
+                <ul>
+                    <li>Fix for different wallpaper modes not working on single display setups</li>
+                </ul>
+            </description>
+        </release>
+        <release version="2.0.1" timestamp="1600837302">
+            <description>
+                <ul>
+                    <li>Fixed random wallpaper</li>
+                </ul>
+            </description>
+        </release>
+        <release version="2.0" timestamp="1598946612">
+            <description>
+                <ul>
+                    <li>Updated to the latest version of libhandy</li>
+                    <li>New option to set a single wallpaper as spanned across all the monitors</li>
+                    <li>Added Cinnamon support</li>
+                    <li>New wallpaper modes: set your wallpapers as zoomed, centered or fitted, with the choice of either a black or a blurred background</li>
+                    <li>Various improvements and bug fixes</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.12" timestamp="1595150857">
+            <description>
+                <ul>
+                    <li>Added Brazilian Portuguese translation</li>
+                    <li>Updated to support the latest version of libhandy</li>
+                    <li>Added more keyboard shortcuts</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.11" timestamp="1589971385">
+            <description>
+                <ul>
+                    <li>New icon courtesy of Tobias Bernard</li>
+                    <li>New minimal favorite wallpaper badge</li>
+                    <li>Various improvements and bug fixes</li>
+                </ul>
+            </description>
+        </release>
+
+        <release version="1.10" timestamp="1586603340">
+            <description>
+                <ul>
+                    <li>New quick buttons to toggle on/off all wallpaper folders at once</li>
+                </ul>
+            </description>
+        </release>
+
+        <release version="1.9.9" timestamp="1584193015">
+            <description>
+                <ul>
+                    <li>Updated flatpak dependencies and GNOME runtime</li>
+                    <li>Removed libwnck dependency and functionalities (lower other windows toggle)</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.9.8" timestamp="1572381124">
+            <description>
+                <ul>
+                    <li>Various bug fixes</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.9.7" timestamp="1571992595">
+            <description>
+                <ul>
+                    <li>You can now set lockscreen wallpapers from the command line</li>
+                    <li>New preference to save wallpapers with random names</li>
+                    <li>Various bug fixes and improvements</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.9.6" timestamp="1569852365">
+            <description>
+                <ul>
+                    <li>Ordering wallpapers folders alphabetically</li>
+                    <li>Fixed folder adding</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.9.5" timestamp="1569489041">
+            <description>
+                <ul>
+                    <li>You can now add multiple folders at once!</li>
+                    <li>Slight design overhaul</li>
+                    <li>Added German and Russian translations (courtesy of Alessandra Gallia)</li>
+                    <li>Redesigned symbolic icon</li>
+                    <li>Initial support for sway (still broken in Flatpak)</li>
+                    <li>Small performance improvements</li>
+                    <li>Various bug fixes</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.9.4" timestamp="1568137893">
+            <description>
+                <ul>
+                    <li>Fixed conflict between desktop and lockscreen wallpapers</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.9.3" timestamp="1567757366">
+            <description>
+                <ul>
+                    <li>Merged wallpapers aren't cached anymore. Just keep one and save lots of space</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.9.2" timestamp="1564647040">
+            <description>
+                <ul>
+                    <li>Fixed path enable/disable bug</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.9.1" timestamp="1564647040">
+            <description>
+                <ul>
+                    <li>Moved app menu to the far right</li>
+                    <li>Added view switcher bar when window is too small</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.9" timestamp="1564647040">
+            <description>
+                <ul>
+                    <li>Added option to set lockscreen wallpapers in GNOME</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.8" timestamp="1563213244">
+            <description>
+                <ul>
+                    <li>Internationalization support and Italian translation</li>
+                    <li>New widgets from Purism's libhandy</li>
+                    <li>Removed animated spinner</li>
+                    <li>Paths in folders view show only the folder name by default</li>
+                    <li>New website</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.7.3" timestamp="1561993358">
+            <description>
+                <ul>
+                    <li>Properly implemented MATE support</li>
+                    <li>Added post-installation commands</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.7.2" timestamp="1561968407">
+            <description>
+                <ul>
+                    <li>Fixing wrong import</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.7.1" timestamp="1561891346">
+            <description>
+                <ul>
+                    <li>Fixed support for MATE under Flatpak</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.7" timestamp="1559744416">
+            <description>
+                <ul>
+                    <li>New icon! Should be closer to GNOME HIG.</li>
+                    <li>Exposed random wallpaper functionality from the in-app menu and desktop file</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.6" timestamp="1559574845">
+            <description>
+                <ul>
+                    <li>Added random wallpaper functionality from command line with -r option</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.5.3" timestamp="1559461094">
+            <description>
+                <ul>
+                    <li>Fixing startup error when added folders get deleted</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.5.2" timestamp="1553762223">
+            <description>
+                <ul>
+                    <li>Get correct localized Pictures folder on first startup</li>
+                    <li>App doesn't crash anymore if a folder doesn't exist</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.5.1" timestamp="1553698201">
+            <description>
+                <ul>
+                    <li>Fixed wallpapers not hiding on startup</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.5" timestamp="1553675339">
+            <description>
+                <ul>
+                    <li>Complete code refactoring</li>
+                    <li>Made the whole build system more modular</li>
+                    <li>Moved app menu to the headerbar</li>
+                    <li>Initial support for keyboard shortcuts</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.4.2" timestamp="1549205990">
+            <description>
+                <ul>
+                    <li>Fixed thumbnail creation for PNGs with alpha channel</li>
+                    <li>Added option to clear cache</li>
+                    <li>Various bug fixes and improvements</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.4.1" timestamp="1544269577">
+            <description>
+                <ul>
+                    <li>Improved thumbnail generation and caching for better performance</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.4" timestamp="1541070602">
+            <description>
+                <ul>
+                    <li>Updated dependencies</li>
+                    <li>Added support for command line usage</li>
+                    <li>Implemented boilerplate for gtk via gmgtk (gitlab.com/gabmus/gmgtk)</li>
+                    <li>Migrated configuration management to gmconfig (gitlab.com/gabmus/gmconfig)</li>
+                    <li>Migrated to GitLab</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.3" timestamp="1519850213">
+            <description>
+                <ul>
+                    <li>Better filename generation</li>
+                    <li>Added support for vertical setups</li>
+                    <li>Added symbolic icon</li>
+                    <li>Added support for MATE</li>
+                    <li>Various bug fixes</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.2" timestamp="1518618734">
+            <description>
+                <ul>
+                    <li>Design makeover</li>
+                    <li>Added longpress/rightclick menu</li>
+                    <li>Implemented favorites</li>
+                    <li>Added option to temporarely disable paths</li>
+                    <li>Added option to minimize/restore all other windows</li>
+                    <li>Improved performance</li>
+                    <li>Various optimizations for flatpak distribution</li>
+                    <li>Removed the dependency on xmltodict</li>
+                    <li>Various bug fixes</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.1.3" timestamp="1516974888">
+            <description>
+                <ul>
+                    <li>Changed icon</li>
+                    <li>Added support for monitors.xml version 1</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.1.2" timestamp="1516816052">
+            <description>
+                <ul>
+                    <li>Improved 3+ monitors configuration</li>
+                    <li>Remember previously set wallpapers throughout sessions</li>
+                    <li>Implemented cache hitting</li>
+                    <li>Added checks and user friendly error messages for monitors.xml</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.1.1" timestamp="1516790767">
+            <description>
+                <ul>
+                    <li>Bug fixes</li>
+                    <li>Added settings window</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.1" timestamp="1516697993">
+            <description>
+                <ul>
+                    <li>Port to pillow</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.0" timestamp="1516618272">
+            <description>
+                <ul>
+                    <li>First release</li>
+                </ul>
+            </description>
+        </release>
+    </releases>
+    <content_rating type="oars-1.1">
+    <content_attribute id="violence-cartoon">none</content_attribute>
+    <content_attribute id="violence-fantasy">none</content_attribute>
+    <content_attribute id="violence-realistic">none</content_attribute>
+    <content_attribute id="violence-bloodshed">none</content_attribute>
+    <content_attribute id="violence-sexual">none</content_attribute>
+    <content_attribute id="violence-desecration">none</content_attribute>
+    <content_attribute id="violence-slavery">none</content_attribute>
+    <content_attribute id="violence-worship">none</content_attribute>
+    <content_attribute id="drugs-alcohol">none</content_attribute>
+    <content_attribute id="drugs-narcotics">none</content_attribute>
+    <content_attribute id="drugs-tobacco">none</content_attribute>
+    <content_attribute id="sex-nudity">none</content_attribute>
+    <content_attribute id="sex-themes">none</content_attribute>
+    <content_attribute id="sex-homosexuality">none</content_attribute>
+    <content_attribute id="sex-prostitution">none</content_attribute>
+    <content_attribute id="sex-adultery">none</content_attribute>
+    <content_attribute id="sex-appearance">none</content_attribute>
+    <content_attribute id="language-profanity">none</content_attribute>
+    <content_attribute id="language-humor">none</content_attribute>
+    <content_attribute id="language-discrimination">none</content_attribute>
+    <content_attribute id="social-chat">none</content_attribute>
+    <content_attribute id="social-info">none</content_attribute>
+    <content_attribute id="social-audio">none</content_attribute>
+    <content_attribute id="social-location">none</content_attribute>
+    <content_attribute id="social-contacts">none</content_attribute>
+    <content_attribute id="money-purchasing">none</content_attribute>
+    <content_attribute id="money-gambling">none</content_attribute>
+  </content_rating>
+  <custom>
+    <value key="Purism::form_factor">workstation</value>
+    <value key="Purism::form_factor">mobile</value>
+  </custom>
+
+</component>

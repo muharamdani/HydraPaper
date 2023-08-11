@@ -1,0 +1,115 @@
+using Gtk 4.0;
+using Adw 1;
+
+menu generalMenu {
+    section {
+        item (_("Single Spanned Wallpaper Mode"), "app.spanned_mode")
+        item (_("Set Random Wallpapers"), "app.set_random_wallpaper")
+    }
+    section {
+        item (_("Preferences"), "app.settings")
+        item (_("Keyboard Shortcuts"), "app.shortcuts")
+        item (_("About HydraPaper"), "app.about")
+    }
+}
+
+template GHeaderbar : WindowHandle {
+    HeaderBar headerbar {
+        show-title-buttons: true;
+        
+        [title] Adw.Squeezer squeezer {
+            notify::visible-child => on_squeeze();
+            Adw.ViewSwitcher stack_switcher {
+                policy: wide;
+            }
+            Label nobox {}
+        }
+        ToggleButton wallpaper_folders_btn {
+            tooltip-text: _("Wallpaper Folders");
+            icon-name: "folder-symbolic";
+            toggled => on_wallpaper_folders_btn_clicked();
+        }
+        ToggleButton search_toggle {
+            tooltip-text: _("Search");
+            icon-name: "system-search-symbolic";
+        }
+        [end] MenuButton menu_btn {
+            tooltip-text: _("Menu");
+            icon-name: "open-menu-symbolic";
+            menu-model: generalMenu;
+        }
+        [end] Box {
+            styles ["linked"]
+            orientation: horizontal;
+            valign: center;
+            Button apply_dark_btn {
+                tooltip-text: _("Apply for Dark Mode");
+                icon-name: "apply-dark-symbolic";
+                clicked => on_apply_dark_btn_clicked();
+            }
+            Button apply_btn {
+                tooltip-text: _("Apply");
+                icon-name: "object-select-symbolic";
+                clicked => on_apply_btn_clicked();
+            }
+        }
+        [end] Button add_to_slideshow_btn {
+            styles ["suggested-action"]
+            visible: false;
+            icon-name: "list-add-symbolic";
+            tooltip-text: _("Add to Slideshow");
+            clicked => on_add_to_slideshow();
+        }
+        [end] MenuButton slideshow_menu_btn {
+            icon-name: "slideshowmode-symbolic";
+            popover: slideshow_popover;
+            tooltip-text: _("Manage Slideshow Mode");
+        }
+
+        Popover slideshow_popover {
+            height-request: 350;
+            width-request: 250;
+            Box slideshow_popover_inner_box {
+                orientation: vertical;
+                spacing: 6;
+                ScrolledWindow {
+                    styles ["frame"]
+                    hscrollbar-policy: never;
+                    vexpand: true;
+                    ListBox slideshow_listbox {
+                        vexpand: true;
+                        show-separators: true;
+                        selection-mode: none;
+                    }
+                }
+                Grid {
+                    row-spacing: 6; column-spacing: 6;
+                    orientation: horizontal;
+                    hexpand: true;
+                    Label {
+                        layout { row: 0; column: 0; }
+                        hexpand: true;
+                        xalign: 0.0;
+                        label: _("Slideshow Mode");
+                    }
+                    Switch slideshow_switch {
+                        layout { row: 0; column: 1; }
+                        halign: center;
+                        state-set => on_slideshow_mode_changed();
+                    }
+                    Label {
+                        layout { row: 1; column: 0; }
+                        hexpand: true;
+                        xalign: 0.0;
+                        label: _("Wallpaper duration");
+                    }
+                    SpinButton slideshow_time_spinbutton {
+                        layout { row: 1; column: 1; }
+                        numeric: true;
+                        value-changed => on_slideshow_time_spinbutton_changed();
+                    }
+                }
+            }
+        }
+    }
+}

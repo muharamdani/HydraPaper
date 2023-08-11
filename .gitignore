@@ -1,6 +1,13 @@
+/build
+/_build
+.fenv
+.flatpak-builder
 __pycache__
-ui.glade\~
+*.glade\~
+*.glade\#
 *.o
+*.1
+*.5
 .deps
 /**/*.swp
 /*.bak

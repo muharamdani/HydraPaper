@@ -2,7 +2,7 @@
     "app-id": "org.gabmus.hydrapaper",
     "command": "hydrapaper",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.28",
+    "runtime-version": "3.32",
     "sdk": "org.gnome.Sdk",
     "finish-args": [
         "--share=ipc",
@@ -22,10 +22,20 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libwnck/3.24/libwnck-3.24.1.tar.xz",
-                    "sha256": "afa6dc283582ffec15c3374790bcbcb5fb422bd38356d72deeef35bf7f9a1f04"
+                    "url": "https://download.gnome.org/sources/libwnck/3.32/libwnck-3.32.0.tar.xz",
+                    "sha256": "9595835cf28d0fc6af5526a18f77f2fcf3ca8c09e36741bb33915b6e69b8e3ca"
                 }
             ]
+        },
+        {
+            "name": "libhandy",
+            "buildsystem": "meson",
+            "config-opts": ["--buildtype=release"],
+            "sources": [{
+                "type": "archive",
+                "url": "https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.10/libhandy-v0.0.10.tar.gz",
+                "sha256": "9f4528c07bdb9796300ff0efb165cdc48cfcd7f28952c9d776de15b735844981"
+            }]
         },
         {
             "name": "python-pillow",
@@ -56,8 +66,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/python-pillow/Pillow/archive/5.0.0.tar.gz",
-                    "sha256": "e85301adaa827b9f29ab518eff99d5719e572ca5f369866ebfe57a92e7135aec"
+                    "url": "https://github.com/python-pillow/Pillow/archive/6.1.0.tar.gz",
+                    "sha256": "9a3a613e7780362605b10765274389b3e9a6fe3201dd2bceeb422d45c5c9ba18"
                 },
                 {
                     "type": "shell",
@@ -68,13 +78,30 @@
             ]
         },
         {
+            "name": "mate-desktop-background-gschema",
+            "buildsystem": "simple",
+            "build-commands": [
+            	"mkdir -p /app/share/glib-2.0/schemas/",
+            	"sed 's#@datadir@#\\/usr\\/share#g' schemas/org.mate.background.gschema.xml.in > schemas/org.mate.background.gschema.xml",
+                "install schemas/org.mate.background.gschema.xml /app/share/glib-2.0/schemas/",
+                "glib-compile-schemas /app/share/glib-2.0/schemas"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/mate-desktop/mate-desktop/archive/v1.23.1.tar.gz",
+                    "sha256": "4bfc81aaaba468b4e39d6aec7fe772d3405f3766058c49168f65cfe4a14e0b47"
+                }
+            ]
+        },
+        {
             "name": "hydrapaper",
             "buildsystem": "meson",
             "builddir": true,
             "config-opts": ["--buildtype=release"],
             "sources": [{
                 "type": "git",
-                "url": "git://github.com/gabmus/hydrapaper"
+                "url": "git://gitlab.com/gabmus/hydrapaper"
             }]
         }
     ]

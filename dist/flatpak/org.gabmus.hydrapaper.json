@@ -2,68 +2,39 @@
     "app-id": "org.gabmus.hydrapaper",
     "command": "hydrapaper",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.28",
+    "runtime-version": "44",
     "sdk": "org.gnome.Sdk",
     "finish-args": [
         "--share=ipc",
-        "--socket=x11",
+        "--socket=fallback-x11",
         "--socket=wayland",
+        "--device=dri",
         "--talk-name=org.gnome.SettingsDaemon",
+        "--talk-name=org.freedesktop.Flatpak",
+        "--talk-name=org.gnome.Mutter.DisplayConfig",
         "--filesystem=home:ro",
+        "--filesystem=xdg-config/autostart",
+        "--filesystem=/usr/share/gnome:ro",
         "--filesystem=xdg-run/dconf",
         "--filesystem=~/.config/dconf:ro",
+        "--filesystem=~/.config/sway/config:rw",
+        "--filesystem=~/.swaylock/config:rw",
+        "--persist=/usr/share/backgrounds",
         "--talk-name=ca.desrt.dconf",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+        "--own-name=org.gabmus.hydrapaper",
+        "--own-name=org.gabmus.hydrapaper.Daemon"
     ],
     "modules": [
+        "python-deps.json",
         {
-            "name": "libwnck",
-            "cleanup": ["/include", "*.la"],
+            "name": "blueprint-compiler",
+            "buildsystem": "meson",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libwnck/3.24/libwnck-3.24.1.tar.xz",
-                    "sha256": "afa6dc283582ffec15c3374790bcbcb5fb422bd38356d72deeef35bf7f9a1f04"
-                }
-            ]
-        },
-        {
-            "name": "python-pillow",
-            "buildsystem": "simple",
-            "build-options": {
-                "arch": {
-                    "i386": {
-                        "env": {
-                            "MAX_CONCURRENCY": "1"
-                        }
-                    },
-                    "arm": {
-                        "env": {
-                            "MAX_CONCURRENCY": "1"
-                        }
-                    }
-                }
-            },
-            "ensure-writable": [
-                "/lib/python*/site-packages/easy-install.pth",
-                "/lib/python*/site-packages/setuptools.pth",
-                "/app/lib/python*/site-packages/easy-install.pth",
-                "/app/lib/python*/site-packages/setuptools.pth"
-            ],
-            "build-commands": [
-                "python3 setup.py install --prefix=/app --root=/"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://github.com/python-pillow/Pillow/archive/5.0.0.tar.gz",
-                    "sha256": "e85301adaa827b9f29ab518eff99d5719e572ca5f369866ebfe57a92e7135aec"
-                },
-                {
-                    "type": "shell",
-                    "commands": [
-                        "sed -i 's/if not platform_/if not dirs/' setup.py"
-                    ]
+                    "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler/-/archive/v0.6.0/blueprint-compiler-v0.6.0.tar.gz",
+                    "sha256": "c9e3652b66803c1de6a24b71f4fa4638b32260b4b04b93c2f3d958e1ce2a175e"
                 }
             ]
         },
@@ -71,12 +42,16 @@
             "name": "hydrapaper",
             "buildsystem": "meson",
             "builddir": true,
-            "config-opts": ["--buildtype=release"],
-            "sources": [{
-                "type": "archive",
-                "url": "https://github.com/GabMus/HydraPaper/archive/1.2.tar.gz",
-                "sha256": "81947df9452e02e7d7bfe04494cd34db3589f930c70dffa9c099698f81f240da"
-            }]
+            "config-opts": [
+                "--buildtype=release"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GabMus/HydraPaper",
+                    "tag": "3.3.1"
+                }
+            ]
         }
     ]
 }

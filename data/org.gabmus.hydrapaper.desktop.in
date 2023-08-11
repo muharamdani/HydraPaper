@@ -1,11 +1,18 @@
 [Desktop Entry]
-Name=HydraPaper
-Comment=Wallpaper manager with multimonitor support for GNOME
-Exec=@bindir@/hydrapaper %U
-Icon=org.gabmus.hydrapaper
+Name=@prettyname@
+Comment=Wallpaper manager with multimonitor support
+Exec=@bindir@/@projectname@ %U
+Icon=@appid@
 Terminal=false
 Type=Application
 StartupNotify=true
-MimeType=
+#MimeType=
 Categories=Utility;GTK;GNOME;
 Keywords=wallpaper;background;monitor;
+Actions=set-random-wallpapers
+# Translators: Do NOT translate or transliterate this text (these are enum types)!
+X-Purism-FormFactor=Workstation;Mobile;
+
+[Desktop Action set-random-wallpapers]
+Name=Set random wallpapers
+Exec=@bindir@/@projectname@ --random
